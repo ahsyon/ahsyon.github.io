@@ -179,6 +179,31 @@
     
     
     <entry>
+      <title>利用快捷指令自动化，轻松实现iPhone节假日闹钟</title>
+      <link href="/2022/10/26/%E5%88%A9%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%8C%E8%BD%BB%E6%9D%BE%E5%AE%9E%E7%8E%B0iPhone%E8%8A%82%E5%81%87%E6%97%A5%E9%97%B9%E9%92%9F/"/>
+      <url>/2022/10/26/%E5%88%A9%E7%94%A8%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4%E8%87%AA%E5%8A%A8%E5%8C%96%EF%BC%8C%E8%BD%BB%E6%9D%BE%E5%AE%9E%E7%8E%B0iPhone%E8%8A%82%E5%81%87%E6%97%A5%E9%97%B9%E9%92%9F/</url>
+      
+        <content type="html"><![CDATA[<div></div><p>使用iPhone的朋友应该都发生过这样的场景，工作很辛苦，每天都是靠着闹钟才能起床，但是节假日忘记关闹钟，结果早早的把你叫醒；而到了该补班的日子，闹钟居然没响。</p><p>这时候，身边使用安卓的朋友都会坏坏的笑，谁让iPhone手机一直以来都没有节假日闹钟呢。</p><span id="more"></span><p>之前就已经有很多大能通过快捷指令来实现节假日闹钟这个功能，但是喜欢折腾的我，看到那些快捷指令后被搞得一头雾水，相信很多不喜欢折腾的人更加不会去用。</p><p>iPhone升级到iOS16以后，Apple官方在日历中增加了“中国节假日”（有的版本叫“中国大陆节日”），只要订阅，就能很贴心的在日历中显示节假日休息和补班的情况。基于这一点，我做了一个快捷指令，通过自动化，实现了节假日闹钟全自动。</p><p>首先直接上快捷指令链接（iPhone浏览器打开下面的浏览器，获取快捷指令）</p><p><a href="https://www.icloud.com/shortcuts/26af890ba5634e6986e842f8ec7ec51b">https://www.icloud.com/shortcuts/26af890ba5634e6986e842f8ec7ec51b</a></p><p>要使用这个快捷指令，你还需要按下面的步骤简单操作下</p><p>第一步：确认iPhone使用的是iOS16以上的系统</p><p>第二步：确认日历中已订阅Apple官方的“中国节假日”或“中国大陆节日”（注意“其他”里的才是官方的）</p><p><img src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/c5f78b4ace804bf6b480a2f91aa8d472~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1735548019&x-signature=1ne1xdLUir19DmJHylO4eE55ESk="></p><p>第三步：确认闹钟中设置有自己需要使用的闹钟</p><p><img src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/2f3d79ecb8fc47e380aa2bf7485e2801~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1735548019&x-signature=a98CKYSa0QzGZF638OW6pJEnpWs="></p><p>第四步：第一次使用前请点击本指令右上角的“三个点”按钮进入编辑页面，然后下划到下方选择闹钟的地方选择所需要开关的闹钟，共4个位置。</p><p><img src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/1973869823644b84960b7fd9d886cf4d~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1735548019&x-signature=3XCLkOmIl/IMLGUKZjFB0tAJRDU="></p><p>第五步：设置自动化在每日0:01-闹钟时间前一分钟期间运行本指令，记得取消“运行前询问”，这样才能自动执行</p><p><img src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/6d8265d8f2194d5284921ed447e58df5~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1735548019&x-signature=7Jff04rtQKjMeLXwYmi5ZV0RgNE="></p><p>下面具体介绍下这个快捷指令的原理，不想自己写快捷指令的朋友可以忽略。</p><p>点击“节假日闹钟”右上角三个点，进入编辑模式</p><p><img src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/46bb6e2949c4470a818756cfc3a738ee~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1735548019&x-signature=Mhq1kRfO2tnnlAnEWa9LpGvSO9A="></p><p>这个快捷指令其实是由三个如果命令来实现的</p><p>首先是如果当前日期是周日，就关闭闹钟，如果是周一到周六，就打开闹钟。（需要周一到周五打开闹钟，周六周日关闭闹钟的朋友，就将“小于2”改为“介于2和6“）</p><p><img src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/8d80a8cdf9124eccb8fdb4d1db596195~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1735548019&x-signature=E8O2ypO8CvVNwDIVqbmTXi7u/f8="></p><p>其次在日历的获取5个日程，这里你可以根据自己的日程数量进行调整，“中国节假日”本身占了2个日程，如果你还有其他的日程，需要增加数量，但最少不能低于2个，不然遇到节假日，节气一起的日子就会出问题。</p><p>快捷指令利用“中国节假日”里的“休”、“班”信息，在获取的日程标题中如果包含“休”，就关闭闹钟，否则就打开闹钟。</p><p><img src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/559551c085ed455e82ae2bc65411a485~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1735548019&x-signature=HDW72wP6lSdI3FbKSZEI0EcpLX4="></p><p>同理，如果在获取的日程标题中如果包含“班”，就打开闹钟，否则就关闭闹钟。</p><p><img src="https://p3-sign.toutiaoimg.com/tos-cn-i-qvj2lq49k0/748deb644a724b97b7e5b4048f85c4a3~tplv-tt-origin-web:gif.jpeg?_iz=58558&from=article.pc_detail&lk3s=953192f4&x-expires=1735548019&x-signature=PCThJYn+LltQU17odKuJEDhbuKQ="></p><p>按照上面的设置你的闹钟就可以根据法定节假日自动运行了。</p><p>国庆期间，我测试了一下，非常准确，希望也能符合大家的要求。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> iPhone相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 快捷指令 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>黑苹果常见问题</title>
       <link href="/2020/12/21/%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
       <url>/2020/12/21/%E9%BB%91%E8%8B%B9%E6%9E%9C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
