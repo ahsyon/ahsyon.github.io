@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>Mac应用程序无法打开或文件损坏的处理方法</title>
+      <link href="/2024/12/24/Mac%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%88%96%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/"/>
+      <url>/2024/12/24/Mac%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80%E6%88%96%E6%96%87%E4%BB%B6%E6%8D%9F%E5%9D%8F%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<div></div><p>大多数用户在安装 Mac 应用时，经常会遇到提示 “ XXX.app 已损坏，打不开。您应该将它移到废纸篓 ” 或 “ 打不开 XXX.app，因为它来自身份不明的开发者 ” </p><span id="more"></span><h3 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h3><p><img src="https://static.skyandroid.cn/images/data/20180118/1516261454857950.png?x-oss-process=style/w_1240" alt="XXX.app 已损坏"></p><h3 id="App-在-macOS-Catalina下提示已损坏无法打开解决办法："><a href="#App-在-macOS-Catalina下提示已损坏无法打开解决办法：" class="headerlink" title="App 在 macOS Catalina下提示已损坏无法打开解决办法："></a>App 在 macOS Catalina下提示已损坏无法打开解决办法：</h3><ol><li>在系统的“安全与隐私”中允许“任何来源”，再打开终端。</li></ol><p><a href="https://static.skyandroid.cn/images/data/1571282938925153.jpeg"><img src="https://static.skyandroid.cn/images/data/1571282938925153.jpeg?x-oss-process=style/w_1240" alt="02.jpg" title="1571282938925153.jpeg"></a></p><ol start="2"><li>输入以下命令；</li></ol><figure class="highlight bash"><figcaption><span>终端</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> xattr -d com.apple.quarantine /Applications/xxxx.app_</span><br></pre></td></tr></table></figure><p><em>注意：<code>/Applications/xxxx.app</code> 换成你的App路径或在sudo xattr -d com.apple.quarantine 后将软件拖进去即可。</em></p><p><em><a href="https://static.skyandroid.cn/images/data/1571283074479461.png"><img src="https://static.skyandroid.cn/images/data/1571283074479461.png?x-oss-process=style/w_1240" alt="2.png" title="1571283074479461.png"></a></em></p><ol start="3"><li>最后，重启App即可。</li></ol><p><em><a href="https://static.skyandroid.cn/images/data/1571283103672667.png"><img src="https://static.skyandroid.cn/images/data/1571283103672667.png?x-oss-process=style/w_1240" alt="3.png" title="1571283103672667.png"></a></em></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> macOS相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> macOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>sensei 一款涵盖软件和硬件的应用程序</title>
+      <link href="/2024/12/24/sensei-%E4%B8%80%E6%AC%BE%E6%B6%B5%E7%9B%96%E8%BD%AF%E4%BB%B6%E5%92%8C%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/"/>
+      <url>/2024/12/24/sensei-%E4%B8%80%E6%AC%BE%E6%B6%B5%E7%9B%96%E8%BD%AF%E4%BB%B6%E5%92%8C%E7%A1%AC%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<div></div>Sensei是一款涵盖软件和硬件的应用程序，比Mac优化类别中的其他应用程序具有更多功能。它具有清理磁盘，卸载应用程序，分析电池和磁盘运行状况，监视CPU / GPU / RAM统计信息，优化启动启动速度等功能。<span id="more"></span><p><img src="https://f.fameile.net/upload/2020/09/LsnUX5%20.png" alt="alt text"></p><h3 id="Sensei功能"><a href="#Sensei功能" class="headerlink" title="Sensei功能"></a>Sensei功能</h3><ul><li><p>绩效仪表板</p></li><li><p>详细的电池报告器</p></li><li><p>磁盘清理器</p></li><li><p>散热仪表板</p></li><li><p>主题支持</p></li><li><p>应用程式解除安装程式</p></li><li><p>详细的硬件信息</p></li><li><p>温度监控器</p></li><li><p>GPU显示器</p></li><li><p>性能优化</p></li><li><p>CPU监控器</p></li><li><p>定制设计</p></li><li><p>RAM监视器</p></li><li><p>详细的显示记者</p></li><li><p>HDD &#x2F; SSD SMART Reporter</p></li><li><p>100％本机代码</p></li><li><p>风扇控制</p></li><li><p>详细的GPU &#x2F; eGPU报告程序</p></li><li><p>SSD修剪启动器</p></li><li><p>口音颜色支持</p></li><li><p>磁盘运行状况分析器</p></li><li><p>磁盘基准</p></li><li><p>电池健康分析仪</p></li><li><p>多种本地化</p></li><li><p>磁盘监控器</p></li><li><p>暗模式</p></li><li><p>启动速度优化器</p></li><li><p>分区图资源管理器</p></li><li><p>GPU固件导出器</p></li></ul><h3 id="网盘下载"><a href="#网盘下载" class="headerlink" title="网盘下载"></a>网盘下载</h3><p><a href="https://cloud.189.cn/t/ZBvyEbaAJvue">1.5.7</a> （访问码：jpt3）</p><p><a href="https://cloud.189.cn/t/aIZB32ru6Zzu">1.5.10</a> （访问码：qxr2）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> macOS相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> app下载 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IINA 最优秀的视频播放器之一</title>
+      <link href="/2024/12/24/IINA-%E6%9C%80%E4%BC%98%E7%A7%80%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8%E4%B9%8B%E4%B8%80/"/>
+      <url>/2024/12/24/IINA-%E6%9C%80%E4%BC%98%E7%A7%80%E7%9A%84%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8%E4%B9%8B%E4%B8%80/</url>
+      
+        <content type="html"><![CDATA[<div></div>IINA 是一款Mac上最优秀的视频播放器之一，IINA比Movist、MPlayerX、VLC等更加的强大和易用，可以说是Mac上的「PotPlayer」,可以支持流畅播放几乎所有主流视频格式，并且支持网络播放。<span id="more"></span>IINA诞生于现代的macOS应用程序，从框架到用户界面。它采用优胜美地设计语言，保持了Force Touch，Touch Bar和Picture-in-Picture等新技术的发展速度。<h3 id="功能强大"><a href="#功能强大" class="headerlink" title="功能强大"></a>功能强大</h3><p>基于mpv，这是迄今为止最强大的媒体播放器项目之一，IINA支持几乎所有常见的媒体类型（甚至GIF），并稳定输出优化视频屏幕的高质量视频。MPV的配置文件和脚本系统也被集成。</p><h3 id="革命性的用户体验"><a href="#革命性的用户体验" class="headerlink" title="革命性的用户体验"></a>革命性的用户体验</h3><p>IINA简化了很多用户互动。除了传统的级联菜单，它更喜欢使用交互式UI组件和手势给您直观，灵活和强大的播放控制。</p><h3 id="你是目标用户"><a href="#你是目标用户" class="headerlink" title="你是目标用户"></a>你是目标用户</h3><p>IINA是由像你这样的用户（也许）也被期望在macOS上有一个强大和优雅的媒体播放器多年。无论您是第一台Mac还是已经是专业的mpv用户，IINA将会满足您的可定制性和可扩展性。</p><h3 id="仍在积极发展"><a href="#仍在积极发展" class="headerlink" title="仍在积极发展"></a>仍在积极发展</h3><p>IINA是用纯粹的Swift和开源编写的。它目前是一个个人项目，但请随意提出问题，发送功能请求或错误报告github或通过电子邮件。当然，它是免费的，永远是免费的。</p><p><a href="https://cloud.189.cn/t/7BN3mi7fURni%EF%BC%88%E8%AE%BF%E9%97%AE%E7%A0%81%EF%BC%9A7yaf%EF%BC%89">网盘下载</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> macOS相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> app下载 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Magnet for Mac</title>
       <link href="/2024/12/24/Magnet-for-Mac/"/>
       <url>/2024/12/24/Magnet-for-Mac/</url>
