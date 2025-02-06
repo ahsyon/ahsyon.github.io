@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>斐讯N1从小钢炮刷回官方系统</title>
+      <link href="/posts/c6cf667/"/>
+      <url>/posts/c6cf667/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div></div><span id="more"></span>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>斐讯N1从小钢炮刷回官方系统</title>
+      <link href="/posts/c6cf667/"/>
+      <url>/posts/c6cf667/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div></div><span id="more"></span><p>不拆盒子的冷门方法，有风险，和我的固件版本不一致不要轻易尝试，已经实验成功，我的盒子刷的小钢炮n1-s905-linux-hacklog-20190411-2042.img.7z，使用线刷工具无反应，按照下面的方法成功刷入官改：<br>1.连上网线，启动盒子，SSH登入，然后把 &#x2F;dev&#x2F;boot分区干掉，输入：mkfs.ext4 &#x2F;dev&#x2F;boot ，然后按照提示输入Y<br>2.关掉电源<br>3.然后使用线刷工具刷入即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 斐讯N1 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>天逸510s Mini兼macOS BigSur安装教程</title>
       <link href="/posts/603675b6/"/>
       <url>/posts/603675b6/</url>
