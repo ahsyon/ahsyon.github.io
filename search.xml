@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>allinone部署教程</title>
+      <link href="/posts/f029f310/"/>
+      <url>/posts/f029f310/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div></div><span id="more"></span><blockquote><p>allinone俗称肥羊一个集成了iptv聚合以及多个直播平台（如斗鱼、虎牙、抖音等）直播源的好项目</p></blockquote><p><strong>主要功能</strong></p><ul><li>聚合直播源： 能够聚合多个直播平台的直播源，用户可以通过该镜像直接观看多个平台的直播内容。</li><li>支持高清画质： 该镜像支持流畅观看4K及更高画质的直播源，为用户提供高清的观看体验。</li><li>多平台支持： 除了Docker外，还提供了主流平台的二进制文件，包括exe格式，方便用户在不同平台上部署和使用。</li></ul><h3 id="部署教程"><a href="#部署教程" class="headerlink" title="部署教程"></a>部署教程</h3><blockquote><p>作者为了防止项目泛滥，设置了门槛，需要生成指定的ALLINONE部署命令才能完成安装</p></blockquote><p><strong>前提条件：</strong> 要有TG（电报）软件</p><p><strong>1️⃣生成AES密钥</strong></p><p>打开下面这个网址，根据自己的环境生成AES密钥，复制保存此密钥！</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;vditor-copy&quot;&gt;&lt;textarea&gt;&lt;/textarea&gt;&lt;span aria-label=&quot;复制&quot; onmouseover=&quot;this.setAttribute(&#x27;aria-label&#x27;, &#x27;复制&#x27;)&quot; class=&quot;vditor-tooltipped vditor-tooltipped__w&quot; onclick=&quot;this.previousElementSibling.select();document.execCommand(&#x27;copy&#x27;);this.setAttribute(&#x27;aria-label&#x27;, &#x27;已复制&#x27;);this.previousElementSibling.blur()&quot;&gt;&lt;svg&gt;&lt;use xlink:href=&quot;#vditor-icon-copy&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/div&gt;&lt;code style=&quot;max-height: 930px;&quot; class=&quot;hljs gradle vditor-linenumber&quot;&gt;https:&lt;span class=&quot;hljs-comment&quot;&gt;//imgtool.v1.mk/allinone.html&lt;/span&gt;</span><br><span class="line">&lt;div class=&quot;vditor-linenumber__temp&quot; style=&quot;display: none;&quot;&gt;&lt;/div&gt;&lt;span class=&quot;vditor-linenumber__rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;position: absolute&quot;&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure><p><img src="https://club.fnnas.com//data/attachment/forum/202501/13/085628ftqu8gln87gbp7gb.png"></p><p><strong>2️⃣获取Userid和专属Token</strong></p><p>打开TG（电报）并且打开 ALLINONE鉴权机器人 ，粘贴前面复制的AES，获取 Userid 和专属 Token</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;vditor-copy&quot;&gt;&lt;textarea&gt;&lt;/textarea&gt;&lt;span aria-label=&quot;复制&quot; onmouseover=&quot;this.setAttribute(&#x27;aria-label&#x27;, &#x27;复制&#x27;)&quot; class=&quot;vditor-tooltipped vditor-tooltipped__w&quot; onclick=&quot;this.previousElementSibling.select();document.execCommand(&#x27;copy&#x27;);this.setAttribute(&#x27;aria-label&#x27;, &#x27;已复制&#x27;);this.previousElementSibling.blur()&quot;&gt;&lt;svg&gt;&lt;use xlink:href=&quot;#vditor-icon-copy&quot;&gt;&lt;/use&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/div&gt;&lt;code style=&quot;max-height: 930px;&quot; class=&quot;hljs properties vditor-linenumber&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;#&amp;nbsp;鉴权机器人链接&lt;/span&gt;</span><br><span class="line">&lt;span class=&quot;hljs-attr&quot;&gt;https&lt;/span&gt;:&lt;span class=&quot;hljs-string&quot;&gt;//t.me/newallinone_bot&lt;/span&gt;</span><br><span class="line">&lt;div class=&quot;vditor-linenumber__temp&quot; style=&quot;display: none;&quot;&gt;&lt;/div&gt;&lt;span class=&quot;vditor-linenumber__rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;span style=&quot;position: absolute&quot;&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure><p><img src="https://club.fnnas.com//data/attachment/forum/202501/13/085628jl3awgigz3xivgd9.jpg"></p><p><strong>3️⃣获取ALLINONE部署命令</strong></p><p>输入在TG获取的 Userid 和专属 Token， 生成 ALLINONE 部署命令</p><p><img src="https://club.fnnas.com//data/attachment/forum/202501/13/085628iy3zyh0vzyzyche3.png"></p><p>根据自己的部署方式复制部署代码即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 网络相关 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> istoreOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>allinone使用说明</title>
       <link href="/posts/d952ac77/"/>
       <url>/posts/d952ac77/</url>
