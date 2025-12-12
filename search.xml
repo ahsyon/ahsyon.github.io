@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Windows11下验机常用的命令</title>
+      <link href="/posts/781ff0f/"/>
+      <url>/posts/781ff0f/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div></div><span id="more"></span><p> Windows11开始，默认要求联网才能进系统，好在可以通过命令行绕过，开机以后会进入到联网环节，通过键盘上的组合键”Shift+F10”调出命令提示窗口，然后输入代码:”oobe\bypassnro”点击确认就可以跳过联网，进入电脑的主页面。<br>‘’’<br>oobe\bypassnro<br>‘’’<br>想知道笔记本电池的状态，我们可以通过命令行输入”powercfg &#x2F;b”来查看。<br>‘’’<br>powercfg &#x2F;b<br>‘’’<br>复制路径，然后在文件资源管理器中打开，就可以查看电池状态了。新买的笔记本应该只有一条电池使用记录，记录了电池的状态和使用时间。时间应该和生产时间接近。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Microsoft Office LTSC 2024 for macOS</title>
       <link href="/posts/fa3940e1/"/>
       <url>/posts/fa3940e1/</url>
