@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Only 18+ - 天生我材必有用</title><meta name="author" content="池中物"><meta name="copyright" content="池中物"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="Only 18+">
+<meta property="og:url" content="http://blog.340102.xyz/page/3/index.html">
+<meta property="og:site_name" content="Only 18+">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg">
+<meta property="article:author" content="池中物">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.340102.xyz/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+          
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: 池中物","link":"链接: ","source":"来源: Only 18+","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Only 18+',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-ellipsis-h"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw far fa-envelope"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/network-status/"><i class="fa-fw fas fa-wifi"></i><span> 网络状态</span></a></li><li><a class="site-page child" href="/equipment/"><i class="fa-fw fas fa-desktop"></i><span> 我的装备</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://pic.340102.xyz/api/rfile/R-C.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://pic.340102.xyz/api/rfile/WeChat40d5941863bf6d38343ec142e8d35310.jpg" alt="Logo"></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-ellipsis-h"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw far fa-envelope"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/network-status/"><i class="fa-fw fas fa-wifi"></i><span> 网络状态</span></a></li><li><a class="site-page child" href="/equipment/"><i class="fa-fw fas fa-desktop"></i><span> 我的装备</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Only 18+</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="mailto:xxxxxx@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a><a class="social-icon" href="https://www.youtube.com" rel="external nofollow noreferrer" target="_blank" title="YouTube"><i class="fab fa-youtube" style="color: #000000;"></i></a><a class="social-icon" href="https://www.wechat.com/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #000000;"></i></a><a class="social-icon" href="https://t.me/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #000000;"></i></a><a class="social-icon" href="https://www.tiktok.com/explore" rel="external nofollow noreferrer" target="_blank" title="TikTok"><i class="fab fa-tiktok" style="color: #000000;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/2c919b9c/" title="hexo搭建记录"><img class="post-bg" src="https://api.dujin.org/bing/1920.php" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo搭建记录"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/2c919b9c/" title="hexo搭建记录">hexo搭建记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-21T02:48:55.000Z" title="发表于 2024-12-21 10:48:55">2024-12-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/blog/">blog</a></span></div><div class="content">Icarus的默认主题配置文件为_config.icarus.yml。 此文件定义了站点全局的布局与样式设置，同时也控制了例如插件与挂件等外部功能的配置。 本文详细介绍了本主题的一般配置，并且解释了Icarus使用哪些配置文件和它是如何生成并验证这些配置。  推送更改命令行git add .git commit -m &quot;github action update&quot; git push origin main   安装hexo主题命令行npm install hexo-theme-aurora hexo-plugin-aurora --save clinpm install -S hexo-theme-icarus hexo-renderer-inferno 删除hexo主题命令行npm uninstall hexo-theme-aurora hexo-plugin-aurora 命令行npm uninstall hexo-theme-icarus hexo-renderer-inferno  生成主题需要在 Hexo 博客的根目录下创建一个...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/7555c338/" title="CleverPDF"><img class="post-bg" src="https://pic.340102.xyz/api/rfile/WeChatf7b8ff6ecc609a9a63296bf2c2c9e5cc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CleverPDF"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/7555c338/" title="CleverPDF">CleverPDF</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-19T03:10:26.000Z" title="发表于 2024-12-19 11:10:26">2024-12-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/macOS%E7%9B%B8%E5%85%B3/">macOS相关</a></span></div><div class="content"> 关于CleverPDFCleverPDF的团队致力于提供文档重构解决方案， 拥有多年的研发经验。 2017年， 我们决定推出这个网站， 为PDF用户提供一系列PDF文档转换， 编辑的工具。 所有功能完全免费！ PDF用户无论在什么操作系统， 只需要通过浏览器和连接互联网， 就能够轻松地完成各种PDF操作。 我们也提供桌面端软件， 包括MAC和WINDOWS版本。 CleverPDF的团队将继续完善和优化我们的网站和服务，希望能提高您的工作效率！    在线地址 网盘地址（访问码：ij5l） </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/fc452982/" title="office相关"><img class="post-bg" src="https://pic.340102.xyz/api/rfile/WeChat1306eb84fb0ee50ea05a9ffec8b54f35.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="office相关"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/fc452982/" title="office相关">office相关</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-19T03:10:26.000Z" title="发表于 2024-12-19 11:10:26">2024-12-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/macOS%E7%9B%B8%E5%85%B3/">macOS相关</a></span></div><div class="content">Office for Mac截至 2024 年 9 月，最新的三个主要版本是 macOS Sequoia、macOS Sonoma 和 macOS Ventura。 从 2024 年 9 月更新 (16.89) macOS Ventura 或更高版本开始，需要接收Word 、 Excel 、 PowerPoint 、 Outlook 和OneNote 的更新。 如果继续使用较旧版本的 macOS，Office 应用仍将工作，但你将不再接收任何更新（包括安全更新）。 将操作系统升级到 macOS Ventura 或更高版本将允许为你的应用提供 Office 更新。 请注意， Office 2024 for Mac 的新安装需要 macOS Ventura 或更高版本。   2024 年 8 月更新 (16.88) 是支持 macOS Monterey 的最后一个版本  2023 年 9 月更新 (16.77) 是支持 macOS Big Sur 的最后一个版本。  2022 年 10 月更新 (16.66) 是支持 macOS Catalina 10.15...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/4a17b156/" title="Hello World"><img class="post-bg" src="https://picsum.photos/1920/1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/4a17b156/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-19T02:04:58.000Z" title="发表于 2024-12-19 10:04:58">2024-12-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/blog/">blog</a></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.  Quick StartCreate a new post$ hexo new &quot;My New Post&quot;  More info: Writing Run server$ hexo server  More info: Server Generate static files$ hexo generate  More info: Generating Deploy to remote sites$ hexo deploy  More info: Deployment </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/5a34554/" title="安装macOS"><img class="post-bg" src="https://pic.340102.xyz/api/rfile/WeChat1306eb84fb0ee50ea05a9ffec8b54f35.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装macOS"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/5a34554/" title="安装macOS">安装macOS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-12-19T02:04:58.000Z" title="发表于 2024-12-19 10:04:58">2024-12-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/macOS%E7%9B%B8%E5%85%B3/">macOS相关</a></span></div><div class="content">如何下载和安装 macOS要从 App Store 下载 macOS，必须从与相应 macOS 兼容的 Mac 上进行下载。如果你的 Mac 不兼容，App Store 会使“获取”按钮显示为灰色，提示相应 macOS 与这台设备不兼容，或提示请求的 macOS 版本不可用。 下载完安装器后： 确保安装器位于启动磁盘的“应用程序”文件夹中。这是当你从“访达”的菜单栏中选取“前往”&gt;“应用程序”时打开的文件夹。如有必要，请将安装器移入这个文件夹。 确保安装器的名称为“Install [版本名称]”，如“Install macOS Sequoia”。它必须是一个安装器 App，而不是包含安装器的磁盘映像 (.dmg) 或软件包 (.pkg)。   使用“终端”创建可引导安装器  将 USB 闪存驱动器直接连接到 Mac。  打开“应用程序”文件夹内“实用工具”文件夹中的“终端”。  根据你下载的具体 macOS，在“终端”中输入下方一个相应的命令。每个命令都假设安装器位于“应用程序”文件夹中，并假设你的 USB 闪存驱动器名为...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/51888dac/" title="家庭宽带升级，还是要看清自己的真实需求"><img class="post-bg" src="https://api.dujin.org/bing/1920.php" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="家庭宽带升级，还是要看清自己的真实需求"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/51888dac/" title="家庭宽带升级，还是要看清自己的真实需求">家庭宽带升级，还是要看清自己的真实需求</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-05-26T08:48:54.000Z" title="发表于 2023-05-26 16:48:54">2023-05-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E5%85%B3/">生活相关</a></span></div><div class="content">  3年前，家里宽带升级到电信500M，用着挺好，一直没啥问题，今年年初突然收到电信的短信，说可以免费升级到1000M，想想白给当然不能错过，于是就办理了升级，结果就有了下面的折腾。 房子装的比较早，所以不是每个房间都有网线，之前是通过华硕的aimesh来实现网络全覆盖的，主路由是华硕的AC86U，与房间里的RTAC5300组mesh网络，一开始是无线组网，后来因为稳定性的问题，改成了有线组网，终于实现了路由器的零存在体验。   这次升级1000M后，测速一直卡在了800M多点，于是就想着是不是家里的路由不行了，要更换成AX系列的。  于是就把路由器升级成了华硕的AX86U Pro，结果才发现自己又一次因为不必要的需求，陷入了过度消费的陷阱之中。  家庭宽带的真实需求到底是多少？ 从冲动消费的情绪里走出来，静下来认真的想一想，才发现自己这次宽带的升级完全是浪费金钱和时间。 宽带速率与下载速率的关系首先说下宽带速率（Mbps）和下载速率（MBps）之间的关系，注意“Mb”和“MB”的区别。为了统一，本文均采用的Mbps来表达。    网络速度 速度单位    100...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/c8f43fee/" title="利用快捷指令自动化，轻松实现iPhone节假日闹钟"><img class="post-bg" src="https://picsum.photos/1920/1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用快捷指令自动化，轻松实现iPhone节假日闹钟"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/c8f43fee/" title="利用快捷指令自动化，轻松实现iPhone节假日闹钟">利用快捷指令自动化，轻松实现iPhone节假日闹钟</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-10-26T08:41:23.000Z" title="发表于 2022-10-26 16:41:23">2022-10-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/iPhone%E7%9B%B8%E5%85%B3/">iPhone相关</a></span></div><div class="content">...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/644e2078/" title="黑苹果常见问题"><img class="post-bg" src="https://api.dujin.org/bing/1920.php" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="黑苹果常见问题"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/644e2078/" title="黑苹果常见问题">黑苹果常见问题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-12-21T03:56:30.000Z" title="发表于 2020-12-21 11:56:30">2020-12-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/macOS%E7%9B%B8%E5%85%B3/">macOS相关</a></span></div><div class="content"> _强烈建议_您没有在生产力设备上安装Beta版软件，从而覆盖了所有稳定的发行版。Beta版软件可能会造成无法挽回的硬件损坏或无法挽回的数据丢失，应自行承担使用风险。 对于使用预发行软件或非官方支持补丁引起的任何潜在损坏或数据丢失，Apple和所有补丁开发者概不负责。请您自己承担风险使用。    我应该使用OpenCore还是Clover截止到目前为止，无论是OpenCore还是Clover，都已经支持Ventura安装使用了  OpenCore v0.9.5 下载 OCAT 下载   Clover v5148 下载 Clover Configurator v5.18.3.0 下载    我可以直接在线升级吗我给您的建议是：不建议小白直接在线更新；比较稳妥的方法是在现在的磁盘上切一个单独的分区进行安装测试 如何保证顺利升级 macOS 正式版 请使用OpenCore v0.9.5 下载 &#x2F; Clover v5148 下载 请于boot-args中添加引导参数：vsmcgen=1， 可能还需要其它引导参数：-lilubetaall vsmcbeta DW1820A...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">池中物</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="mailto:xxxxxx@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a><a class="social-icon" href="https://www.youtube.com" rel="external nofollow noreferrer" target="_blank" title="YouTube"><i class="fab fa-youtube" style="color: #000000;"></i></a><a class="social-icon" href="https://www.wechat.com/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #000000;"></i></a><a class="social-icon" href="https://t.me/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #000000;"></i></a><a class="social-icon" href="https://www.tiktok.com/explore" rel="external nofollow noreferrer" target="_blank" title="TikTok"><i class="fab fa-tiktok" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/fa3940e1/" title="Microsoft Office LTSC 2024 for macOS"><img src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Microsoft Office LTSC 2024 for macOS"/></a><div class="content"><a class="title" href="/posts/fa3940e1/" title="Microsoft Office LTSC 2024 for macOS">Microsoft Office LTSC 2024 for macOS</a><time datetime="2025-12-12T06:33:51.000Z" title="发表于 2025-12-12 14:33:51">2025-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/fdfd3174/" title="iptv相关问题"><img src="https://bing.340102.xyz/?h=1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="iptv相关问题"/></a><div class="content"><a class="title" href="/posts/fdfd3174/" title="iptv相关问题">iptv相关问题</a><time datetime="2025-03-01T03:43:38.000Z" title="发表于 2025-03-01 11:43:38">2025-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f029f310/" title="allinone部署教程"><img src="https://bing.340102.xyz/?h=1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="allinone部署教程"/></a><div class="content"><a class="title" href="/posts/f029f310/" title="allinone部署教程">allinone部署教程</a><time datetime="2025-02-17T07:47:46.000Z" title="发表于 2025-02-17 15:47:46">2025-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d952ac77/" title="allinone使用说明"><img src="https://picsum.photos/1920/1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="allinone使用说明"/></a><div class="content"><a class="title" href="/posts/d952ac77/" title="allinone使用说明">allinone使用说明</a><time datetime="2025-02-17T07:43:19.000Z" title="发表于 2025-02-17 15:43:19">2025-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/5fa76441/" title="安装G-Box"><img src="https://unsplash.it/1920/1080?random" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装G-Box"/></a><div class="content"><a class="title" href="/posts/5fa76441/" title="安装G-Box">安装G-Box</a><time datetime="2025-02-14T04:37:37.000Z" title="发表于 2025-02-14 12:37:37">2025-02-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/blog/"><span class="card-category-list-name">blog</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/iPhone%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">iPhone相关</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/macOS%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">macOS相关</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%B1%BD%E8%BD%A6/"><span class="card-category-list-name">汽车</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%94%9F%E6%B4%BB%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">生活相关</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/"><span class="card-category-list-name">网络相关</span><span class="card-category-list-count">6</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/hexo/" style="font-size: 1.2em; color: #999da3">hexo</a> <a href="/tags/openwrt/" style="font-size: 1.1em; color: #999">openwrt</a> <a href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/" style="font-size: 1.3em; color: #99a1ac">黑苹果</a> <a href="/tags/istoreOS/" style="font-size: 1.4em; color: #99a5b6">istoreOS</a> <a href="/tags/%E5%AE%9D%E9%A9%AC3%E7%B3%BB/" style="font-size: 1.1em; color: #999">宝马3系</a> <a href="/tags/app%E4%B8%8B%E8%BD%BD/" style="font-size: 1.5em; color: #99a9bf">app下载</a> <a href="/tags/%E9%AB%98%E5%B0%94%E5%A4%AB/" style="font-size: 1.1em; color: #999">高尔夫</a> <a href="/tags/%E5%AE%BD%E5%B8%A6/" style="font-size: 1.1em; color: #999">宽带</a> <a href="/tags/%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/" style="font-size: 1.1em; color: #999">快捷指令</a> <a href="/tags/macOS/" style="font-size: 1.2em; color: #999da3">macOS</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/12/">
+            <span class="card-archive-list-date">
+              十二月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/12/">
+            <span class="card-archive-list-date">
+              十二月 2024
+            </span>
+            <span class="card-archive-list-count">11</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/05/">
+            <span class="card-archive-list-date">
+              五月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/10/">
+            <span class="card-archive-list-date">
+              十月 2022
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/12/">
+            <span class="card-archive-list-date">
+              十二月 2020
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">26</div></div><div class="webinfo-item"><div class="item-name">运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="1981-04-01T04:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">30.3k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-12T06:56:42.745Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://pic.340102.xyz/api/rfile/R-C.jpeg);"><div id="footer-wrap"><div class="copyright">&copy;1980 - 2025 By 池中物</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hey, hit <a href="https://blog.340102.xyz/">me</a> hard and soft!!!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      if (true) {
+        const from = '出自 ' + data.from
+        const sub = ["金陵岂是池中物 一遇风云便化龙"]
+        sub.unshift(data.hitokoto, from)
+        typedJSFn.init(sub)
+      } else {
+        document.getElementById('subtitle').textContent = data.hitokoto
+      }
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-order="random" data-mutex="true" > </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>斐讯N1为例 如何构建一个docker版ImmortalWrt! | Only 18+</title><meta name="author" content="池中物"><meta name="copyright" content="池中物"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="视频教程 ➡️ https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1fuc8eGEPa&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="斐讯N1为例 如何构建一个docker版ImmortalWrt!">
+<meta property="og:url" content="http://blog.340102.xyz/posts/9c3e0018/index.html">
+<meta property="og:site_name" content="Only 18+">
+<meta property="og:description" content="视频教程 ➡️ https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1fuc8eGEPa&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic.340102.xyz/api/rfile/phicomm-n1.jpg">
+<meta property="article:published_time" content="2025-01-17T07:33:34.000Z">
+<meta property="article:modified_time" content="2025-02-25T02:25:14.549Z">
+<meta property="article:author" content="池中物">
+<meta property="article:tag" content="openwrt">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.340102.xyz/api/rfile/phicomm-n1.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "斐讯N1为例 如何构建一个docker版ImmortalWrt!",
+  "url": "http://blog.340102.xyz/posts/9c3e0018/",
+  "image": "https://pic.340102.xyz/api/rfile/phicomm-n1.jpg",
+  "datePublished": "2025-01-17T07:33:34.000Z",
+  "dateModified": "2025-02-25T02:25:14.549Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "悟空的日常",
+      "url": "https://space.bilibili.com/250915741"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.340102.xyz/posts/9c3e0018/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+          
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: 池中物","link":"链接: ","source":"来源: Only 18+","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '斐讯N1为例 如何构建一个docker版ImmortalWrt!',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-ellipsis-h"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw far fa-envelope"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/network-status/"><i class="fa-fw fas fa-wifi"></i><span> 网络状态</span></a></li><li><a class="site-page child" href="/equipment/"><i class="fa-fw fas fa-desktop"></i><span> 我的装备</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://pic.340102.xyz/api/rfile/phicomm-n1.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://pic.340102.xyz/api/rfile/WeChat40d5941863bf6d38343ec142e8d35310.jpg" alt="Logo"></a><a class="nav-page-title" href="/"><span class="site-name">斐讯N1为例 如何构建一个docker版ImmortalWrt!</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-ellipsis-h"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw far fa-envelope"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/network-status/"><i class="fa-fw fas fa-wifi"></i><span> 网络状态</span></a></li><li><a class="site-page child" href="/equipment/"><i class="fa-fw fas fa-desktop"></i><span> 我的装备</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">斐讯N1为例 如何构建一个docker版ImmortalWrt!</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-17T07:33:34.000Z" title="发表于 2025-01-17 15:33:34">2025-01-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-25T02:25:14.549Z" title="更新于 2025-02-25 10:25:14">2025-02-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3/">网络相关</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="视频教程-➡️-https-www-bilibili-com-video-BV1fuc8eGEPa"><a href="#视频教程-➡️-https-www-bilibili-com-video-BV1fuc8eGEPa" class="headerlink" title="视频教程 ➡️ https://www.bilibili.com/video/BV1fuc8eGEPa/"></a><strong>视频教程 ➡️</strong> <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.bilibili.com/video/BV1fuc8eGEPa/"><strong>https://www.bilibili.com/video/BV1fuc8eGEPa/</strong></a><iframe src="https://www.youtube.com/embed/vicNV7Ue1nY?si=1I_unuIRGyihnVVL" width="560" height="315" frameborder="0" allowfullscreen="true" framespacing="0" style="display: inline-block"></iframe></h1><div></div>
+
+<span id="more"></span>
+
+
+<blockquote>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p>检查系统时间是否正确。安装好docker</p>
+<p>sudo date -s “YYYY-MM-DD HH:MM:SS”</p>
+<p>【N1 Armbian】<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/ophub/amlogic-s9xxx-armbian/releases/">https://github.com/ophub/amlogic-s9xxx-armbian/releases/</a></p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo date -s &quot;2025-01-14 16:01:00&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -qO pi.sh https://cafe.cpolar.top/wkdaily/zero3/raw/branch/main/zero3/pi.sh &amp;&amp; chmod +x pi.sh &amp;&amp; ./pi.sh</span><br></pre></td></tr></table></figure>
+
+<h1 id="下载并解压rootfs-tar-gz"><a href="#下载并解压rootfs-tar-gz" class="headerlink" title="下载并解压rootfs.tar.gz"></a>下载并解压rootfs.tar.gz</h1><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://downloads.immortalwrt.org/releases/24.10.0-rc3/targets/armsr/armv8/">https://downloads.immortalwrt.org/releases/24.10.0-rc3/targets/armsr/armv8/</a></p>
+<p>如果是 x86-64 则应该访问 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://downloads.immortalwrt.org/releases/24.10.0-rc3/targets/x86/64/">https://downloads.immortalwrt.org/releases/24.10.0-rc3/targets/x86/64/</a></p>
+<p>【如果是玩客云这类32位的】<a target="_blank" rel="noopener external nofollow noreferrer" href="https://downloads.immortalwrt.org/releases/24.10.0-rc3/targets/armsr/armv7/">https://downloads.immortalwrt.org/releases/24.10.0-rc3/targets/armsr/armv7/</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mkdir imm</span><br><span class="line">cd imm</span><br><span class="line">wget -O rootfs.tar.gz https://downloads.immortalwrt.org/releases/24.10.0-rc3/targets/armsr/armv8/immortalwrt-24.10.0-rc3-armsr-armv8-rootfs.tar.gz</span><br><span class="line">gzip -d rootfs.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h1 id="创建一个Dockerfile文件"><a href="#创建一个Dockerfile文件" class="headerlink" title="创建一个Dockerfile文件"></a>创建一个Dockerfile文件</h1><h5 id="（粘贴下列可迅速获得带内容的Dockerfile文件-考虑到各位亲-对于vim编辑器是在不够熟练）"><a href="#（粘贴下列可迅速获得带内容的Dockerfile文件-考虑到各位亲-对于vim编辑器是在不够熟练）" class="headerlink" title="（粘贴下列可迅速获得带内容的Dockerfile文件 考虑到各位亲 对于vim编辑器是在不够熟练）"></a>（粘贴下列可迅速获得带内容的Dockerfile文件 考虑到各位亲 对于vim编辑器是在不够熟练）</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt;&quot;Dockerfile&quot;</span><br><span class="line">FROM scratch</span><br><span class="line">ADD rootfs.tar /</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看Dockerfile-具体内容"><a href="#查看Dockerfile-具体内容" class="headerlink" title="查看Dockerfile 具体内容"></a>查看Dockerfile 具体内容</h1><h1 id="cat-Dockerfile"><a href="#cat-Dockerfile" class="headerlink" title="cat Dockerfile"></a><code>cat Dockerfile</code></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">FROM scratch</span><br><span class="line">ADD rootfs.tar /</span><br></pre></td></tr></table></figure>
+
+<h1 id="构建docker镜像"><a href="#构建docker镜像" class="headerlink" title="构建docker镜像"></a>构建docker镜像</h1><h5 id="在Dockerfile所在目录执行-immortalwrt-image-是我们取的-docker镜像名称-叫什么都行。"><a href="#在Dockerfile所在目录执行-immortalwrt-image-是我们取的-docker镜像名称-叫什么都行。" class="headerlink" title="在Dockerfile所在目录执行 immortalwrt-image 是我们取的 docker镜像名称 叫什么都行。"></a>在Dockerfile所在目录执行 <code>immortalwrt-image</code> 是我们取的 docker镜像名称 叫什么都行。</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker build -t immortalwrt-image .</span><br></pre></td></tr></table></figure>
+
+<h1 id="查看网卡名称"><a href="#查看网卡名称" class="headerlink" title="查看网卡名称"></a>查看网卡名称</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip link show</span><br></pre></td></tr></table></figure>
+
+<h5 id="假设网卡名称为eth0-注意-有些设备的网卡名称为end0-要根据上述命令查看的"><a href="#假设网卡名称为eth0-注意-有些设备的网卡名称为end0-要根据上述命令查看的" class="headerlink" title="假设网卡名称为eth0 (注意 有些设备的网卡名称为end0 要根据上述命令查看的)"></a>假设网卡名称为eth0 (注意 有些设备的网卡名称为end0 要根据上述命令查看的)</h5><h6 id="假设你的主路由器网关是192-168-66-1"><a href="#假设你的主路由器网关是192-168-66-1" class="headerlink" title="假设你的主路由器网关是192.168.66.1"></a><strong>假设你的主路由器网关是192.168.66.1</strong></h6><h5 id="Docker-中创建一个-macvlan-网络"><a href="#Docker-中创建一个-macvlan-网络" class="headerlink" title="Docker 中创建一个 macvlan 网络"></a>Docker 中创建一个 <strong>macvlan</strong> 网络</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker network create -d macvlan \</span><br><span class="line">  --subnet=192.168.66.0/24 \</span><br><span class="line">  --gateway=192.168.66.1 \</span><br><span class="line">  -o parent=eth0 \</span><br><span class="line">  macnet</span><br></pre></td></tr></table></figure>
+
+<p>不用开启混杂模式 因为<code>macvlan</code> 网络与 <code>docker0</code> 的桥接网络完全不同，它不依赖 <code>docker0</code>，而是直接与宿主机的物理接口</p>
+<p><del>ip link set docker0 promisc on</del></p>
+<h5 id="打印docker中的macvlan网络是否创建成功"><a href="#打印docker中的macvlan网络是否创建成功" class="headerlink" title="打印docker中的macvlan网络是否创建成功"></a>打印docker中的<strong>macvlan</strong>网络是否创建成功</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker network ls</span><br></pre></td></tr></table></figure>
+
+<p>macvlan 的一个特性是宿主机无法直接与容器通信。如果你的需求是让宿主机与 OpenWrt 容器通信，你需要在<strong>宿主机上创建一个虚拟接口</strong>（通常称为 macvlan 子接口），并将其加入同一 macvlan 网络。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip link add macvlan-shim link eth0 type macvlan mode bridge</span><br><span class="line">ip addr add 192.168.66.2/24 dev macvlan-shim</span><br><span class="line">ip link set macvlan-shim up</span><br></pre></td></tr></table></figure>
+
+<p>注意检查上述ip地址<code>192.168.66.2</code> 确保它没有被其他设备占用</p>
+<ul>
+<li><p><code>macvlan-shim</code> 是虚拟接口的名称，你可以自定义。</p>
+</li>
+<li><p><code>192.168.66.2/24</code> 是给宿主机虚拟接口分配的 IP 地址，应位于 <code>192.168.66.0/24</code> 子网内，且不冲突。</p>
+</li>
+</ul>
+<p><strong>添加路由（如果需要）</strong> 如果宿主机需要通过 macvlan 网络访问容器，可以添加路由：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip route add 192.168.66.0/24 dev macvlan-shim</span><br></pre></td></tr></table></figure>
+
+<p><code>dev</code> 是 <strong>device</strong> 的缩写，用来指定路由条目所绑定的网络接口（设备）。</p>
+<h1 id="运行我们自己创建的docker-容器"><a href="#运行我们自己创建的docker-容器" class="headerlink" title="运行我们自己创建的docker 容器"></a>运行我们自己创建的docker 容器</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker run --name immortalwrt -d --network macnet --privileged immortalwrt-image:latest /sbin/init</span><br></pre></td></tr></table></figure>
+
+<p><code>immortalwrt</code> 为docker容器名称</p>
+<p><code>immortalwrt-image</code>是docker镜像名称（上述docker build 所得）</p>
+<p>————————————————————————************************————————————————————</p>
+<h1 id="运行后-，进入容器，容器内就是immortalwrt-系统啦"><a href="#运行后-，进入容器，容器内就是immortalwrt-系统啦" class="headerlink" title="运行后 ，进入容器，容器内就是immortalwrt 系统啦"></a>运行后 ，进入容器，容器内就是immortalwrt 系统啦</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">docker exec -it immortalwrt sh</span><br></pre></td></tr></table></figure>
+
+<h1 id="在ImmortalWrt-命令行里设置静态ip（vim编辑器）"><a href="#在ImmortalWrt-命令行里设置静态ip（vim编辑器）" class="headerlink" title="在ImmortalWrt 命令行里设置静态ip（vim编辑器）"></a><del>在ImmortalWrt 命令行里设置静态ip（vim编辑器）</del></h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vi /etc/config/network</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">config interface &#x27;lan&#x27;</span><br><span class="line">        option ifname &#x27;eth0&#x27;</span><br><span class="line">        option proto &#x27;static&#x27;</span><br><span class="line">        option netmask &#x27;255.255.255.0&#x27;</span><br><span class="line">        option ipbassign &#x27;60&#x27;</span><br><span class="line">        option ipaddr &#x27;192.168.66.88&#x27;</span><br><span class="line">        option gateway &#x27;192.168.66.1&#x27;</span><br><span class="line">        option dns &#x27;223.5.5.5 1.1.1.1&#x27;</span><br></pre></td></tr></table></figure>
+
+<h1 id="为了避免大家使用vim编辑器，你可以复制如下代码到命令"><a href="#为了避免大家使用vim编辑器，你可以复制如下代码到命令" class="headerlink" title="为了避免大家使用vim编辑器，你可以复制如下代码到命令"></a>为了避免大家使用vim编辑器，你可以复制如下代码到命令</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">config interface &#x27;lan&#x27;</span><br><span class="line">        option ifname &#x27;eth0&#x27;</span><br><span class="line">        option proto &#x27;static&#x27;</span><br><span class="line">        option netmask &#x27;255.255.255.0&#x27;</span><br><span class="line">        option ipbassign &#x27;60&#x27;</span><br><span class="line">        option ipaddr &#x27;192.168.66.88&#x27;</span><br><span class="line">        option gateway &#x27;192.168.66.1&#x27;</span><br><span class="line">        option dns &#x27;223.5.5.5 1.1.1.1&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>上述代码中 <code>192.168.66.88</code> 是我设置的ip地址，你要<strong>根据自己主路由器的ip网段</strong>来调整。</p>
+<h1 id="重启ImmortalWrt的网络"><a href="#重启ImmortalWrt的网络" class="headerlink" title="重启ImmortalWrt的网络"></a>重启ImmortalWrt的网络</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/etc/init.d/network restart</span><br></pre></td></tr></table></figure>
+
+<h1 id="如果imm没有网-就在宿主机再次执行一次"><a href="#如果imm没有网-就在宿主机再次执行一次" class="headerlink" title="如果imm没有网 就在宿主机再次执行一次"></a>如果imm没有网 就在宿主机再次执行一次</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ip link set macvlan-shim up</span><br></pre></td></tr></table></figure>
+
+<p><code>luci-i18n-filebrowser-go-zh-cn</code></p>
+<h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><h2 id="在docker-版的immortalwrt中安装一些必备插件"><a href="#在docker-版的immortalwrt中安装一些必备插件" class="headerlink" title="在docker 版的immortalwrt中安装一些必备插件"></a>在docker 版的immortalwrt中安装一些必备插件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">opkg update</span><br><span class="line">opkg install luci-i18n-ttyd-zh-cn</span><br><span class="line">opkg install luci-i18n-filebrowser-go-zh-cn</span><br><span class="line">opkg install luci-i18n-argon-config-zh-cn</span><br><span class="line">opkg install openssh-sftp-server</span><br><span class="line">opkg install luci-i18n-samba4-zh-cn</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装iStore商店-ARM64-x86-64通用"><a href="#安装iStore商店-ARM64-x86-64通用" class="headerlink" title="安装iStore商店(ARM64 &amp; x86-64通用)"></a>安装iStore商店(ARM64 &amp; x86-64通用)</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget -qO imm.sh https://cafe.cpolar.top/wkdaily/zero3/raw/branch/main/zero3/imm.sh &amp;&amp; chmod +x imm.sh &amp;&amp; ./imm.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="安装网络向导和首页-ARM64-x86-64通用"><a href="#安装网络向导和首页-ARM64-x86-64通用" class="headerlink" title="安装网络向导和首页(ARM64 &amp; x86-64通用)"></a>安装网络向导和首页(ARM64 &amp; x86-64通用)</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">is-opkg install luci-i18n-quickstart-zh-cn</span><br></pre></td></tr></table></figure></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/250915741">悟空的日常</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://wkdaily.cpolar.top/archives/15">https://wkdaily.cpolar.top/archives/15</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">转载请注明出处</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/openwrt/">openwrt</a></div><div class="post-share"><div class="social-share" data-image="https://pic.340102.xyz/api/rfile/phicomm-n1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">池中物</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="mailto:xxxxxx@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a><a class="social-icon" href="https://www.youtube.com" rel="external nofollow noreferrer" target="_blank" title="YouTube"><i class="fab fa-youtube" style="color: #000000;"></i></a><a class="social-icon" href="https://www.wechat.com/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #000000;"></i></a><a class="social-icon" href="https://t.me/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #000000;"></i></a><a class="social-icon" href="https://www.tiktok.com/explore" rel="external nofollow noreferrer" target="_blank" title="TikTok"><i class="fab fa-tiktok" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B-%E2%9E%A1%EF%B8%8F-https-www-bilibili-com-video-BV1fuc8eGEPa"><span class="toc-number">1.</span> <span class="toc-text">视频教程 ➡️ https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1fuc8eGEPa&#x2F;</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">准备工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%A7%A3%E5%8E%8Brootfs-tar-gz"><span class="toc-number">3.</span> <span class="toc-text">下载并解压rootfs.tar.gz</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AADockerfile%E6%96%87%E4%BB%B6"><span class="toc-number">4.</span> <span class="toc-text">创建一个Dockerfile文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%EF%BC%88%E7%B2%98%E8%B4%B4%E4%B8%8B%E5%88%97%E5%8F%AF%E8%BF%85%E9%80%9F%E8%8E%B7%E5%BE%97%E5%B8%A6%E5%86%85%E5%AE%B9%E7%9A%84Dockerfile%E6%96%87%E4%BB%B6-%E8%80%83%E8%99%91%E5%88%B0%E5%90%84%E4%BD%8D%E4%BA%B2-%E5%AF%B9%E4%BA%8Evim%E7%BC%96%E8%BE%91%E5%99%A8%E6%98%AF%E5%9C%A8%E4%B8%8D%E5%A4%9F%E7%86%9F%E7%BB%83%EF%BC%89"><span class="toc-number">4.0.0.0.1.</span> <span class="toc-text">（粘贴下列可迅速获得带内容的Dockerfile文件 考虑到各位亲 对于vim编辑器是在不够熟练）</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8BDockerfile-%E5%85%B7%E4%BD%93%E5%86%85%E5%AE%B9"><span class="toc-number">5.</span> <span class="toc-text">查看Dockerfile 具体内容</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cat-Dockerfile"><span class="toc-number">6.</span> <span class="toc-text">cat Dockerfile</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9E%84%E5%BB%BAdocker%E9%95%9C%E5%83%8F"><span class="toc-number">7.</span> <span class="toc-text">构建docker镜像</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%9C%A8Dockerfile%E6%89%80%E5%9C%A8%E7%9B%AE%E5%BD%95%E6%89%A7%E8%A1%8C-immortalwrt-image-%E6%98%AF%E6%88%91%E4%BB%AC%E5%8F%96%E7%9A%84-docker%E9%95%9C%E5%83%8F%E5%90%8D%E7%A7%B0-%E5%8F%AB%E4%BB%80%E4%B9%88%E9%83%BD%E8%A1%8C%E3%80%82"><span class="toc-number">7.0.0.0.1.</span> <span class="toc-text">在Dockerfile所在目录执行 immortalwrt-image 是我们取的 docker镜像名称 叫什么都行。</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%8D%A1%E5%90%8D%E7%A7%B0"><span class="toc-number">8.</span> <span class="toc-text">查看网卡名称</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E7%BD%91%E5%8D%A1%E5%90%8D%E7%A7%B0%E4%B8%BAeth0-%E6%B3%A8%E6%84%8F-%E6%9C%89%E4%BA%9B%E8%AE%BE%E5%A4%87%E7%9A%84%E7%BD%91%E5%8D%A1%E5%90%8D%E7%A7%B0%E4%B8%BAend0-%E8%A6%81%E6%A0%B9%E6%8D%AE%E4%B8%8A%E8%BF%B0%E5%91%BD%E4%BB%A4%E6%9F%A5%E7%9C%8B%E7%9A%84"><span class="toc-number">8.0.0.0.1.</span> <span class="toc-text">假设网卡名称为eth0 (注意 有些设备的网卡名称为end0 要根据上述命令查看的)</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%81%87%E8%AE%BE%E4%BD%A0%E7%9A%84%E4%B8%BB%E8%B7%AF%E7%94%B1%E5%99%A8%E7%BD%91%E5%85%B3%E6%98%AF192-168-66-1"><span class="toc-number">8.0.0.0.1.1.</span> <span class="toc-text">假设你的主路由器网关是192.168.66.1</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Docker-%E4%B8%AD%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-macvlan-%E7%BD%91%E7%BB%9C"><span class="toc-number">8.0.0.0.2.</span> <span class="toc-text">Docker 中创建一个 macvlan 网络</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%93%E5%8D%B0docker%E4%B8%AD%E7%9A%84macvlan%E7%BD%91%E7%BB%9C%E6%98%AF%E5%90%A6%E5%88%9B%E5%BB%BA%E6%88%90%E5%8A%9F"><span class="toc-number">8.0.0.0.3.</span> <span class="toc-text">打印docker中的macvlan网络是否创建成功</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E6%88%91%E4%BB%AC%E8%87%AA%E5%B7%B1%E5%88%9B%E5%BB%BA%E7%9A%84docker-%E5%AE%B9%E5%99%A8"><span class="toc-number">9.</span> <span class="toc-text">运行我们自己创建的docker 容器</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C%E5%90%8E-%EF%BC%8C%E8%BF%9B%E5%85%A5%E5%AE%B9%E5%99%A8%EF%BC%8C%E5%AE%B9%E5%99%A8%E5%86%85%E5%B0%B1%E6%98%AFimmortalwrt-%E7%B3%BB%E7%BB%9F%E5%95%A6"><span class="toc-number">10.</span> <span class="toc-text">运行后 ，进入容器，容器内就是immortalwrt 系统啦</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%A8ImmortalWrt-%E5%91%BD%E4%BB%A4%E8%A1%8C%E9%87%8C%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81ip%EF%BC%88vim%E7%BC%96%E8%BE%91%E5%99%A8%EF%BC%89"><span class="toc-number">11.</span> <span class="toc-text">在ImmortalWrt 命令行里设置静态ip（vim编辑器）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BA%E4%BA%86%E9%81%BF%E5%85%8D%E5%A4%A7%E5%AE%B6%E4%BD%BF%E7%94%A8vim%E7%BC%96%E8%BE%91%E5%99%A8%EF%BC%8C%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%A4%8D%E5%88%B6%E5%A6%82%E4%B8%8B%E4%BB%A3%E7%A0%81%E5%88%B0%E5%91%BD%E4%BB%A4"><span class="toc-number">12.</span> <span class="toc-text">为了避免大家使用vim编辑器，你可以复制如下代码到命令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E5%90%AFImmortalWrt%E7%9A%84%E7%BD%91%E7%BB%9C"><span class="toc-number">13.</span> <span class="toc-text">重启ImmortalWrt的网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E6%9E%9Cimm%E6%B2%A1%E6%9C%89%E7%BD%91-%E5%B0%B1%E5%9C%A8%E5%AE%BF%E4%B8%BB%E6%9C%BA%E5%86%8D%E6%AC%A1%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1"><span class="toc-number">14.</span> <span class="toc-text">如果imm没有网 就在宿主机再次执行一次</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-number">15.</span> <span class="toc-text">后记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8docker-%E7%89%88%E7%9A%84immortalwrt%E4%B8%AD%E5%AE%89%E8%A3%85%E4%B8%80%E4%BA%9B%E5%BF%85%E5%A4%87%E6%8F%92%E4%BB%B6"><span class="toc-number">15.1.</span> <span class="toc-text">在docker 版的immortalwrt中安装一些必备插件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85iStore%E5%95%86%E5%BA%97-ARM64-x86-64%E9%80%9A%E7%94%A8"><span class="toc-number">16.</span> <span class="toc-text">安装iStore商店(ARM64 &amp; x86-64通用)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E7%BD%91%E7%BB%9C%E5%90%91%E5%AF%BC%E5%92%8C%E9%A6%96%E9%A1%B5-ARM64-x86-64%E9%80%9A%E7%94%A8"><span class="toc-number">17.</span> <span class="toc-text">安装网络向导和首页(ARM64 &amp; x86-64通用)</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/fa3940e1/" title="Microsoft Office LTSC 2024 for macOS"><img src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Microsoft Office LTSC 2024 for macOS"/></a><div class="content"><a class="title" href="/posts/fa3940e1/" title="Microsoft Office LTSC 2024 for macOS">Microsoft Office LTSC 2024 for macOS</a><time datetime="2025-12-12T06:33:51.000Z" title="发表于 2025-12-12 14:33:51">2025-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/fdfd3174/" title="iptv相关问题"><img src="https://bing.340102.xyz/?h=1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="iptv相关问题"/></a><div class="content"><a class="title" href="/posts/fdfd3174/" title="iptv相关问题">iptv相关问题</a><time datetime="2025-03-01T03:43:38.000Z" title="发表于 2025-03-01 11:43:38">2025-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f029f310/" title="allinone部署教程"><img src="https://bing.340102.xyz/?h=1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="allinone部署教程"/></a><div class="content"><a class="title" href="/posts/f029f310/" title="allinone部署教程">allinone部署教程</a><time datetime="2025-02-17T07:47:46.000Z" title="发表于 2025-02-17 15:47:46">2025-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d952ac77/" title="allinone使用说明"><img src="https://picsum.photos/1920/1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="allinone使用说明"/></a><div class="content"><a class="title" href="/posts/d952ac77/" title="allinone使用说明">allinone使用说明</a><time datetime="2025-02-17T07:43:19.000Z" title="发表于 2025-02-17 15:43:19">2025-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/5fa76441/" title="安装G-Box"><img src="https://unsplash.it/1920/1080?random" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装G-Box"/></a><div class="content"><a class="title" href="/posts/5fa76441/" title="安装G-Box">安装G-Box</a><time datetime="2025-02-14T04:37:37.000Z" title="发表于 2025-02-14 12:37:37">2025-02-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://pic.340102.xyz/api/rfile/phicomm-n1.jpg);"><div id="footer-wrap"><div class="copyright">&copy;1980 - 2025 By 池中物</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hey, hit <a href="https://blog.340102.xyz/">me</a> hard and soft!!!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'ahsyon/comments',
+      'data-repo-id': 'R_kgDONgKNnA',
+      'data-category-id': 'DIC_kwDONgKNnM4ClY3N',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-order="random" data-mutex="true" > </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

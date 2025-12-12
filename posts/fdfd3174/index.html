@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>iptv相关问题 | Only 18+</title><meta name="author" content="池中物"><meta name="copyright" content="池中物"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="article">
+<meta property="og:title" content="iptv相关问题">
+<meta property="og:url" content="http://blog.340102.xyz/posts/fdfd3174/index.html">
+<meta property="og:site_name" content="Only 18+">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://bing.340102.xyz/?h=1080">
+<meta property="article:published_time" content="2025-03-01T03:43:38.000Z">
+<meta property="article:modified_time" content="2025-03-04T03:32:32.613Z">
+<meta property="article:author" content="池中物">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bing.340102.xyz/?h=1080"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "iptv相关问题",
+  "url": "http://blog.340102.xyz/posts/fdfd3174/",
+  "image": "https://bing.340102.xyz/?h=1080",
+  "datePublished": "2025-03-01T03:43:38.000Z",
+  "dateModified": "2025-03-04T03:32:32.613Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "池中物",
+      "url": "http://blog.340102.xyz/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.340102.xyz/posts/fdfd3174/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+          
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: 池中物","link":"链接: ","source":"来源: Only 18+","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'iptv相关问题',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-ellipsis-h"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw far fa-envelope"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/network-status/"><i class="fa-fw fas fa-wifi"></i><span> 网络状态</span></a></li><li><a class="site-page child" href="/equipment/"><i class="fa-fw fas fa-desktop"></i><span> 我的装备</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://bing.340102.xyz/?h=1080);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://pic.340102.xyz/api/rfile/WeChat40d5941863bf6d38343ec142e8d35310.jpg" alt="Logo"></a><a class="nav-page-title" href="/"><span class="site-name">iptv相关问题</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-ellipsis-h"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw far fa-envelope"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/network-status/"><i class="fa-fw fas fa-wifi"></i><span> 网络状态</span></a></li><li><a class="site-page child" href="/equipment/"><i class="fa-fw fas fa-desktop"></i><span> 我的装备</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">iptv相关问题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-01T03:43:38.000Z" title="发表于 2025-03-01 11:43:38">2025-03-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-04T03:32:32.613Z" title="更新于 2025-03-04 11:32:32">2025-03-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>18分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div></div>
+
+<span id="more"></span>
+
+<p>每到春节看春晚的时候，就发现不用运营商的机顶盒，看直播非常麻烦。<br>以前还有电视家之类的app可以用，现在只能自己去找各种直播源，关键是自己找的直播源，还经常失效。<br>为了解决这个问题，最近我好好的研究了一下关于iptv相关的资料。</p>
+<p><img src="https://img.hyun.tech/blog/iptv.jpg" alt="IPTV 折腾全记录 - 多种方案详解"></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>想用自己的设备看电视？有多个设备要看电视？要用一根网线即上网又看电视？<br>本文提供 udpxy &#x2F; igmpproxy &#x2F; vlan单线复用 三种方案满足你的全部需求。</p>
+<h2 id="不使用运营商盒子"><a href="#不使用运营商盒子" class="headerlink" title="不使用运营商盒子"></a>不使用运营商盒子</h2><h3 id="方案一-udpxy-组播转单拨-推荐）"><a href="#方案一-udpxy-组播转单拨-推荐）" class="headerlink" title="方案一 - udpxy 组播转单拨 (推荐）"></a>方案一 - udpxy 组播转单拨 (推荐）</h3><blockquote>
+<p><strong>前置条件：</strong> Openwrt 路由器一台<br><strong>优点：</strong> 不限设备，随时随地观看直播<br><strong>缺点：</strong> 部分IPTV服务缺失（点播，回放等）</p>
+</blockquote>
+<h4 id="Step1-将-IPTV-接入主路由"><a href="#Step1-将-IPTV-接入主路由" class="headerlink" title="Step1: 将 IPTV 接入主路由"></a>Step1: 将 IPTV 接入主路由</h4><ul>
+<li><p><strong>如果你有光猫超级管理员权限，可以登陆光猫设置端口vlan绑定</strong></p>
+<ol>
+<li><p>登陆光猫，查看<code>互联网</code>与<code>IPTV</code>业务的 <code>VLAN ID</code><br><img src="https://img.hyun.tech/blog/iptv_1.PNG" alt="iptv_1"><br>从上图可以看出，互联网业务是772，IPTV 是20。</p>
+</li>
+<li><p>设置端口 VLAN 绑定<br><img src="https://img.hyun.tech/blog/iptv_2.PNG" alt="iptv_2"><br>这里将772绑定为10，20绑定为11，具体绑定的ID任意</p>
+</li>
+</ol>
+</li>
+<li><p><strong>如果没有，则需要另取一根网线将光猫的iptv端口连接到路由器上</strong></p>
+</li>
+</ul>
+<h4 id="Step2-配置主路由"><a href="#Step2-配置主路由" class="headerlink" title="Step2: 配置主路由"></a>Step2: 配置主路由</h4><blockquote>
+<p><strong>警告：</strong><br>请务必备份你的路由器设置！<br>此步骤操作不当可能导致与路由器失联，需重置路由器。</p>
+</blockquote>
+<p>将所有WAN接口绑定的设备修改为<code>br-lan.【Internet 业务绑定ID】</code>，这里均设置为<code>br-lan.10</code>，<strong>注意此时不要应用设置，仅保存即可</strong> 。</p>
+<p><img src="https://img.hyun.tech/blog/image.png" alt="image"></p>
+<p>设置LAN接口的设备为<code>br-lan.1</code>（当然也可以设置其他的数字，不要一样就行），<strong>同样此时不要应用设置，仅保存即可</strong> 。</p>
+<p><img src="https://img.hyun.tech/blog/image-1707288698515.png" alt="image-1707288698515"></p>
+<p>打开接口 - 设备 - br-lan - 配置，按照下图进行设置</p>
+<p><img src="https://img.hyun.tech/blog/image-1707289478688.png" alt="image-1707289478688"></p>
+<p>将IPTV接口连接到盒子上用于一会抓包（这里是<code>eth3</code> ）</p>
+<p>保存并应用全部配置，稍等片刻。此时 IPTV 盒子应该可以正常使用，且 LAN 正常访问互联网。</p>
+<h4 id="Step3-抓包"><a href="#Step3-抓包" class="headerlink" title="Step3: 抓包"></a>Step3: 抓包</h4><p>安装好wireshark，电脑运行如下命令，开始抓包（地址和网口根据你的情况修改）</p>
+<ul>
+<li><p>Linux</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@192.168.100.1 tcpdump -i eth3 -U -s0 -w - | wireshark -k -i -</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Windows</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh root@192.168.100.1<span class="string">&#x27;tcpdump -i eth3 -U -s0 -w -&#x27;</span> | /path/to/Wireshark.exe -k -i -</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>此时，打开盒子电源，等待启动完成后打开直播随便切几个台。</p>
+<h4 id="Step4-模拟盒子登陆认证"><a href="#Step4-模拟盒子登陆认证" class="headerlink" title="Step4: 模拟盒子登陆认证"></a>Step4: 模拟盒子登陆认证</h4><blockquote>
+<p>理论上可以直接设置成一个静态地址跳过认证，不过为了避免潜在的IP冲突，不稳定性，这里还是使用模拟盒子 IPoE 认证的方法。</p>
+</blockquote>
+<p>停止抓包，过虑 dhcp 数据包，找到并单击 dhcp discover 请求。</p>
+<p><img src="https://img.hyun.tech/blog/image-1707291272332.png" alt="image-1707291272332"></p>
+<p>记录盒子 <code>MAC 地址</code>、<code>Host Name</code>、<code>Vendor class identifier</code>。<br>其中 <code>Vendor class identifier</code> 应该是二进制数据，需要<strong>右键 -&gt; 复制 -&gt; As a hex stream</strong>。</p>
+<p>新建一个名为 <code>IPTV</code> 的接口，按照下图配置：</p>
+<p><img src="https://img.hyun.tech/blog/image-1707291486313.png" alt="image-1707291486313"></p>
+<p><img src="https://img.hyun.tech/blog/image-1707291544531.png" alt="image-1707291544531"></p>
+<p>并在 接口 - 设备 - br-lan.11 配置 MAC 地址。</p>
+<p>最后，为了正常发送 hex 格式的 Vendor class identifier，需要将 <code>/lib/netifd/proto/dhcp.sh</code> 的 <code>72 行</code> 从</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$&#123;vendorid:+-V &quot;$vendorid&quot;&#125;</span> \</span><br></pre></td></tr></table></figure>
+
+<p>修改为</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="variable">$&#123;vendorid:+-V &quot;&quot; &quot;-x 0x3c:$vendorid&quot;&#125;</span> \</span><br></pre></td></tr></table></figure>
+
+<p>保存并应用设置，此时应当认证成功并为之分配了一个IP。</p>
+<h4 id="Step5-安装并配置-udpxy"><a href="#Step5-安装并配置-udpxy" class="headerlink" title="Step5: 安装并配置 udpxy"></a>Step5: 安装并配置 udpxy</h4><p>打开 系统 - 软件包 - 下载并安装软件包，安装 <code>luci-app-udpxy</code></p>
+<p>刷新，打开 服务 - udpxy 按照下图配置：<br><img src="https://img.hyun.tech/blog/image-1707292277118.png" alt="image-1707292277118"></p>
+<p>Bind Interface 填 br-lan.【LAN 的 VLAN ID】<br>Source Interface 填 br-lan.【IPTV 的 VLAN ID】</p>
+<h4 id="Step6-分析组播地址并测试"><a href="#Step6-分析组播地址并测试" class="headerlink" title="Step6: 分析组播地址并测试"></a>Step6: 分析组播地址并测试</h4><p>在 Wireshark 中，输入 <code>http</code> 过滤 http 数据包，Ctrl+F 搜索 <code>channelorderbyset_data.jsp</code></p>
+<p>右键该条目，追踪流 - HTTP Stream</p>
+<p><img src="https://img.hyun.tech/blog/image-1707292816544.png" alt="image-1707292816544"></p>
+<p>找到诸如 <code>igmp://225.1.2.47:10276</code> 的数据，将其替换为 <code>http://&lt;你的路由器IP&gt;:4022/rtp/225.1.2.47:10276</code> 即对应频道的内网单播直播地址，填入播放器即可播放。</p>
+<p>如果你无法通过该方法获得频道列表，可以观察接收到的大量 udp 组播数据包获得频道的组播地址（此处为 <code>225.1.2.47</code>）。</p>
+<p><img src="https://img.hyun.tech/blog/image-1707293060894.png" alt="image-1707293060894"></p>
+<h2 id="使用运营商盒子"><a href="#使用运营商盒子" class="headerlink" title="使用运营商盒子"></a>使用运营商盒子</h2><p>一般来说，IPTV要求预埋一条从光猫到电视的专用网线。但是由于装修时未考虑该需求，只留了一根网线用于放置在客厅的路由器，导致IPTV无法安装或不得不放弃客厅的无线覆盖。这种情况下可以考虑<code>igmproxy</code>或<code>单线复用</code>方案。</p>
+<h3 id="方案二-igmpproxy"><a href="#方案二-igmpproxy" class="headerlink" title="方案二 - igmpproxy"></a>方案二 - igmpproxy</h3><blockquote>
+<p><strong>前置条件：</strong> Openwrt 路由器一台<br><strong>优点：</strong> 无需购买其他专用设备<br><strong>缺点：</strong> 观看直播时出现广播风暴，影响其他网络设备的性能</p>
+</blockquote>
+<p>如果想让运营商赠送的盒子正常使用，需要满足以下条件：</p>
+<ol>
+<li>正常访问位于内网的服务器</li>
+<li>路由器能够处理组播igmp协议</li>
+</ol>
+<h4 id="Step1-配置路由器并模拟认证"><a href="#Step1-配置路由器并模拟认证" class="headerlink" title="Step1: 配置路由器并模拟认证"></a>Step1: 配置路由器并模拟认证</h4><p>完成方案一 <code>Step1</code> 到 <code>Step4</code></p>
+<h4 id="Step2-连通IPTV内网"><a href="#Step2-连通IPTV内网" class="headerlink" title="Step2: 连通IPTV内网"></a>Step2: 连通IPTV内网</h4><p>添加一个静态路由，设置 10.0.0.0&#x2F;8 的内网段走 IPTV 接口。<br><img src="https://img.hyun.tech/blog/image-1707295180843.png" alt="image-1707295180843"></p>
+<p>其中网关地址和子网掩码可以在盒子设置或者抓的 DHCP Offer 包的 <code>Relay agent IP address</code> 与 <code>Subnet Mask</code> 字段得到。</p>
+<p>打开接口 - IPTV - 编辑 - 防火墙设置 - 创建新的名为 IPTV 的防火墙区域。</p>
+<p>打开网络 - 防火墙，如图打开 IPTV 域的 IP 动态伪装（即 NAT 功能）。<br><img src="https://img.hyun.tech/blog/image-1707294357102.png" alt="image-1707294357102"></p>
+<p>并编辑 lan 区域，在 <code>允许转发到目标区域</code> 中添加 <code>iptv</code> 区域</p>
+<p>保存并应用，配置盒子使用不带认证的 DHCP 获取 IP地址，此时插入局域网任意 LAN 口，盒子应该能正常联网，但无法观看直播（因为现在还无法加入组播）。</p>
+<h4 id="Step3-启用-igmpproxy"><a href="#Step3-启用-igmpproxy" class="headerlink" title="Step3: 启用 igmpproxy"></a>Step3: 启用 igmpproxy</h4><p>打开 系统 - 软件包 - 下载并安装软件包，安装 <code>igmpproxy</code></p>
+<p>编辑 <code>/etc/config/igmpproxy</code></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">config igmpproxy</span><br><span class="line">        option quickleave 1</span><br><span class="line"></span><br><span class="line">config phyint</span><br><span class="line">        option network br-lan.11</span><br><span class="line">        option zone iptv <span class="comment"># the upstream firewall zone for forward rules</span></span><br><span class="line">        option direction upstream</span><br><span class="line">        list altnet 0.0.0.0/0 <span class="comment"># a description of allowed source addresses for multicast packets</span></span><br><span class="line"></span><br><span class="line">config phyint</span><br><span class="line">        option network br-lan.1</span><br><span class="line">        option zone lan <span class="comment">#the downstream firewall zone for forward rules</span></span><br><span class="line">        option direction downstream</span><br></pre></td></tr></table></figure>
+
+<p>注意根据自己情况修改 <code>br-lan.11</code>、<code>br-lan.1</code>、<code>option zone iptv</code><br>重启路由器，此时盒子应当能在任意 LAN 口正常使用。</p>
+<h3 id="方案三-单线复用"><a href="#方案三-单线复用" class="headerlink" title="方案三 - 单线复用"></a>方案三 - 单线复用</h3><blockquote>
+<p><strong>前置条件：</strong> Openwrt 路由器一台、网管交换机（支持vlan）一台<br><strong>优点：</strong> 对局域网其他设备影响较小，稳定性高<br><strong>缺点：</strong> 另需购买一台专用设备</p>
+</blockquote>
+<h4 id="Step1-配置路由器"><a href="#Step1-配置路由器" class="headerlink" title="Step1: 配置路由器"></a>Step1: 配置路由器</h4><p>完成方案一 <code>Step1</code> 到 <code>Step2</code>，并按照下图设置 VLAN 交换：<br><img src="https://img.hyun.tech/blog/image-1707295458891.png" alt="image-1707295458891"></p>
+<p>其中，eth3 将连接具有vlan功能的交换机或路由器。</p>
+<h4 id="Step2-配置网管交换机"><a href="#Step2-配置网管交换机" class="headerlink" title="Step2: 配置网管交换机"></a>Step2: 配置网管交换机</h4><p>将网管交换机如下设置即可：</p>
+<ul>
+<li>插入上级路由器的端口设置为 vlan 1 和 vlan 11 的 tagged 模式</li>
+<li>插入 IPTV的端口设置为 vlan id 为 11 的 untagged 模式</li>
+<li>插入其他联网设备的端口设置为 vlan id 为 1 的 untagged 模式</li>
+</ul>
+<p>由于具体设备不同，详细方法自行查阅设备说明书。</p>
+<h2 id="进阶操作"><a href="#进阶操作" class="headerlink" title="进阶操作"></a>进阶操作</h2><blockquote>
+<p><strong>由于不同地区系统不同，以下内容仅供参考</strong><br>操作前请先根据<code>方案一</code> 和 <code>方案二</code> 的 <code>Step2</code> 完成主路由配置</p>
+</blockquote>
+<p>通过脚本模拟运营商盒子登陆，数据请求，格式转换等，可以让第三方软件如 <code>tivimate</code> 实时获取到最新的节目单与频道列表数据，甚至可以支持回放功能。</p>
+<p>此处给的脚本基于河南联通，不同地区与运营商需要根据自己抓的包进行一定的修改。</p>
+<h3 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h3><h4 id="Step1-获取必要数据"><a href="#Step1-获取必要数据" class="headerlink" title="Step1: 获取必要数据"></a>Step1: 获取必要数据</h4><p><img src="https://img.hyun.tech/blog/image-1707316381823.png" alt="image-1707316381823"><br>打开之前 Wireshark 抓取的数据包，如图搜索找到登陆请求 <code>xxxxxx/auth.jsp</code>，右键 -&gt; 追踪流 -&gt; HTTP Stream</p>
+<p><img src="https://img.hyun.tech/blog/image-1707316638420.png" alt="image-1707316638420"><br>记录 <code>Authenticator</code> 参数，与 <code>Host</code> 后的地址，记为 <code>API_EPG_BASE</code>。</p>
+<p>搜索 <code>/getencrypttoken.jsp</code>，同样的操作，记录 <code>Host</code> 后的地址，记为 <code>API_EAS_BASE</code>。</p>
+<p>Authenticator 参数实际上是下方内容用 <code>$</code> 拼接起来经 3DES 加密后的 HEX 数据：</p>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>8位随机数</td>
+<td>请求 <code>getencrypttoken.jsp</code> 的得到的 Encrypt Token</td>
+<td>账号</td>
+<td>序列号</td>
+<td>IP</td>
+<td>MAC</td>
+<td>∅</td>
+<td>CTC</td>
+</tr>
+</tbody></table>
+<p>加密的密码一般是你的机顶盒账户密码（六位）并用字符 0 填充到二十四位，如果你不知道密码，可以打开盒子系统设置-账户中查看，或者尝试<code>000000</code>（笔者所在地区的账号密码是盒子第一次启动时系统自动下发的）。</p>
+<h4 id="Step2-修改脚本代码"><a href="#Step2-修改脚本代码" class="headerlink" title="Step2: 修改脚本代码"></a>Step2: 修改脚本代码</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/env python3</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> urllib.parse <span class="keyword">import</span> urlsplit, parse_qs</span><br><span class="line"><span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> DES3</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.Padding <span class="keyword">import</span> unpad, pad</span><br><span class="line"><span class="keyword">from</span> xml.etree.ElementTree <span class="keyword">import</span> Element, SubElement, tostring</span><br><span class="line"></span><br><span class="line">KEY = <span class="string">&#x27;000000&#x27;</span>.ljust(<span class="number">24</span>, <span class="string">&#x27;0&#x27;</span>) <span class="comment"># 修改六位数字密码</span></span><br><span class="line">AUTHENTICATOR = <span class="string">&#x27;&#x27;</span> <span class="comment"># 填写你抓取到的 Authenticator</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 下面地址根据抓的包自行修改</span></span><br><span class="line">API_EAS_IP = <span class="string">&#x27;10.222.33.44&#x27;</span></span><br><span class="line">API_EAS_BASE = <span class="string">&#x27;http://10.222.33.44:8080/iptvepg/&#x27;</span></span><br><span class="line">API_EPG_BASE = <span class="string">&#x27;http://10.233.44.55:8080/iptvepg/&#x27;</span></span><br><span class="line"></span><br><span class="line">UDPXY_BASE = <span class="string">&#x27;http://192.168.1.1:5678/rtp/&#x27;</span></span><br><span class="line">SERVICE_BASE = <span class="string">&#x27;http://192.168.1.1:1234&#x27;</span></span><br><span class="line"></span><br><span class="line">COMMON_HEADERS = &#123;</span><br><span class="line">    <span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (X11; Linux x86_64; ChromiumBrowser) AppleWebKit/534.24 (KHTML, like Gecko) Safari/534.24 SkWebKit-HA-CU&#x27;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">os.chdir(os.path.dirname(__file__))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">auth_in</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">adjust_key_parity</span>(<span class="params">key_in</span>):</span><br><span class="line">        <span class="keyword">def</span> <span class="title function_">parity_byte</span>(<span class="params">key_byte</span>):</span><br><span class="line">            parity = <span class="number">1</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">8</span>):</span><br><span class="line">                parity ^= (key_byte &amp;gt;&amp;gt; i) &amp;amp; <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> (key_byte &amp;amp; <span class="number">0xFE</span>) | parity</span><br><span class="line"></span><br><span class="line">        <span class="keyword">from</span> Crypto.Util.py3compat <span class="keyword">import</span> bchr</span><br><span class="line">        <span class="keyword">from</span> Crypto.Util.py3compat <span class="keyword">import</span> bord</span><br><span class="line">        key_out = <span class="string">b&quot;&quot;</span>.join([bchr(parity_byte(bord(x))) <span class="keyword">for</span> x <span class="keyword">in</span> key_in])</span><br><span class="line">        <span class="keyword">return</span> key_out</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ignore error: Triple DES key degenerates to single DES</span></span><br><span class="line">    DES3.adjust_key_parity = adjust_key_parity</span><br><span class="line"></span><br><span class="line">    cryptor = DES3.new(KEY, DES3.MODE_ECB)</span><br><span class="line">    data = cryptor.decrypt(<span class="built_in">bytes</span>.fromhex(AUTHENTICATOR))</span><br><span class="line">    data = unpad(data, DES3.block_size).decode()</span><br><span class="line">    data = data.split(<span class="string">&#x27;$&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># get encrypt token</span></span><br><span class="line">    headers = COMMON_HEADERS.copy().update(&#123;</span><br><span class="line">        <span class="string">&#x27;Host&#x27;</span>: <span class="string">&#x27;iptvz.shangdu.com:8080&#x27;</span>,</span><br><span class="line">    &#125;)</span><br><span class="line">    res = requests.get(API_EAS_BASE + <span class="string">&#x27;platform/getencrypttoken.jsp&#x27;</span>, headers=headers, params=&#123;</span><br><span class="line">        <span class="string">&#x27;UserID&#x27;</span>: data[<span class="number">2</span>],</span><br><span class="line">        <span class="string">&#x27;Action&#x27;</span>: <span class="string">&#x27;Login&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;TerminalFlag&#x27;</span>: <span class="number">1</span>,</span><br><span class="line">        <span class="string">&#x27;TerminalOsType&#x27;</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="string">&#x27;STBID&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;stbtype&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;).text</span><br><span class="line">    encrypt_token = re.search(<span class="string">r&quot;GetAuthInfo\(&#x27;(.*)&#x27;\)&quot;</span>, res).group(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># replace 8-digit random number</span></span><br><span class="line">    data[<span class="number">0</span>] = <span class="built_in">str</span>(random.randint(<span class="number">0</span>, <span class="number">99999999</span>)).zfill(<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># replace encrypt token</span></span><br><span class="line">    data[<span class="number">1</span>] = encrypt_token</span><br><span class="line"></span><br><span class="line">    <span class="comment"># auth</span></span><br><span class="line">    session = requests.Session()</span><br><span class="line">    session.headers.update(COMMON_HEADERS)</span><br><span class="line">    res = session.post(API_EPG_BASE + <span class="string">&#x27;platform/auth.jsp&#x27;</span>, params=&#123;</span><br><span class="line">        <span class="string">&#x27;easip&#x27;</span>: API_EAS_IP,</span><br><span class="line">        <span class="string">&#x27;ipVersion&#x27;</span>: <span class="number">4</span>,</span><br><span class="line">        <span class="string">&#x27;networkid&#x27;</span>: <span class="number">1</span></span><br><span class="line">    &#125;, data=&#123;</span><br><span class="line">        <span class="string">&#x27;UserID&#x27;</span>: data[<span class="number">2</span>],</span><br><span class="line">        <span class="string">&#x27;Authenticator&#x27;</span>: cryptor.encrypt(pad(<span class="string">&#x27;$&#x27;</span>.join(data).encode(), DES3.block_size)).<span class="built_in">hex</span>().upper(),</span><br><span class="line">        <span class="string">&#x27;StbIP&#x27;</span>: data[<span class="number">4</span>]</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># convert server time to local time</span></span><br><span class="line">    serverTime = datetime.strptime(res.headers[<span class="string">&#x27;Date&#x27;</span>], <span class="string">&#x27;%a, %d %b %Y %H:%M:%S %Z&#x27;</span>)</span><br><span class="line">    serverExpiredTime = re.search(<span class="string">r&quot;\(&#x27;TokenExpiredTime&#x27;, *&#x27;([^&#x27;]*)&#x27;&quot;</span>, res.text).group(<span class="number">1</span>)</span><br><span class="line">    serverExpiredTime = datetime.strptime(serverExpiredTime, <span class="string">&#x27;%Y.%m.%d %H:%M:%S&#x27;</span>)</span><br><span class="line">    expiredTime = datetime.now() + (serverExpiredTime - serverTime)</span><br><span class="line"></span><br><span class="line">    redirect_url = re.search(<span class="string">r&quot;window\.location(?:\.href)? *= *&#x27;(.*)&#x27;&quot;</span>, res.text).group(<span class="number">1</span>)</span><br><span class="line">    session.get(redirect_url)</span><br><span class="line"></span><br><span class="line">    redirect_url = urlsplit(redirect_url)</span><br><span class="line">    params = &#123;k: v[<span class="number">0</span>] <span class="keyword">for</span> k, v <span class="keyword">in</span> parse_qs(redirect_url.query).items()&#125;</span><br><span class="line"></span><br><span class="line">    res = session.post(API_EPG_BASE + <span class="string">&#x27;function/funcportalauth.jsp&#x27;</span>, data=&#123;</span><br><span class="line">        <span class="string">&#x27;UserToken&#x27;</span>: params[<span class="string">&#x27;UserToken&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;UserID&#x27;</span>: params[<span class="string">&#x27;UserID&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;STBID&#x27;</span>: params[<span class="string">&#x27;STBID&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;stbinfo&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;prmid&#x27;</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;easip&#x27;</span>: params[<span class="string">&#x27;easip&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;networkid&#x27;</span>: params[<span class="string">&#x27;networkid&#x27;</span>],</span><br><span class="line">        <span class="string">&#x27;stbtype&#x27;</span>: <span class="string">&#x27;E900V21E&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;drmsupplier&#x27;</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">assert</span> res.headers[<span class="string">&#x27;X-Frame-UserToken&#x27;</span>] == params[<span class="string">&#x27;UserToken&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 加载首页</span></span><br><span class="line">    res = session.get(API_EPG_BASE + <span class="string">&#x27;frame1442/portal.jsp?tempno=-1&#x27;</span>)</span><br><span class="line">    <span class="keyword">assert</span> res.headers[<span class="string">&#x27;X-Frame-UserToken&#x27;</span>] == params[<span class="string">&#x27;UserToken&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> session, expiredTime</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">_session = <span class="literal">None</span></span><br><span class="line">_session_expire = datetime(<span class="number">1970</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;iptv.json&#x27;</span>, <span class="string">&#x27;r&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        cache = json.load(f)</span><br><span class="line">        _session = requests.Session()</span><br><span class="line">        _session.headers.update(COMMON_HEADERS)</span><br><span class="line">        _session.cookies.update(cache[<span class="string">&#x27;cookies&#x27;</span>])</span><br><span class="line">        _session_expire = datetime.fromisoformat(cache[<span class="string">&#x27;expireTime&#x27;</span>])</span><br><span class="line"><span class="keyword">except</span> FileNotFoundError:</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">cached_auth_in</span>():</span><br><span class="line">    <span class="keyword">global</span> _session, _session_expire</span><br><span class="line">    <span class="keyword">if</span> _session <span class="keyword">is</span> <span class="literal">None</span> <span class="keyword">or</span> datetime.now() &amp;gt;= _session_expire:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;[*]&#x27;</span>, <span class="string">&#x27;Cache expired, re-authenticating...&#x27;</span>)</span><br><span class="line">        _session, _session_expire = auth_in()</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;iptv.json&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            json.dump(&#123;</span><br><span class="line">                <span class="string">&#x27;cookies&#x27;</span>: _session.cookies.get_dict(),</span><br><span class="line">                <span class="string">&#x27;expireTime&#x27;</span>: _session_expire.isoformat()</span><br><span class="line">            &#125;, f)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> _session</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">request</span>(<span class="params">method, url, retry=<span class="literal">True</span>, **kwargs</span>):</span><br><span class="line">    <span class="keyword">global</span> _session_expire</span><br><span class="line">    session = cached_auth_in()</span><br><span class="line">    res = session.request(method, url, **kwargs)</span><br><span class="line">    err = re.search(<span class="string">r&quot;qrcodeerror\.jsp\?errorcode=(\d+)&quot;</span>, res.text)</span><br><span class="line">    sessionExp = re.search(<span class="string">r&quot;rebuildsessionresponse\.jsp&quot;</span>, res.text)</span><br><span class="line">    <span class="keyword">if</span> err <span class="keyword">or</span> sessionExp:</span><br><span class="line">        <span class="keyword">if</span> err:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;[!]&#x27;</span>, <span class="string">&#x27;An error occurred during request:&#x27;</span>, err.group(<span class="number">1</span>))</span><br><span class="line">        <span class="keyword">if</span> retry:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;[!]&#x27;</span>, <span class="string">&#x27;Refreshing session...&#x27;</span>)</span><br><span class="line">            _session_expire = datetime(<span class="number">1970</span>, <span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line">            cached_auth_in()</span><br><span class="line">            <span class="keyword">return</span> request(method, url, retry=<span class="literal">False</span>, **kwargs)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">raise</span> Exception(<span class="string">&#x27;Request failed, error code: %s&#x27;</span> % err.group(<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">channel_list</span>():</span><br><span class="line">    res = request(<span class="string">&#x27;post&#x27;</span>, API_EPG_BASE + <span class="string">&#x27;function/frameset_builder.jsp&#x27;</span>, data=&#123;</span><br><span class="line">        <span class="string">&quot;MAIN_WIN_SRC&quot;</span>: <span class="string">&quot;/iptvepg/frame1442/portal.jsp?tempno=-1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;NEED_UPDATE_STB&quot;</span>: <span class="string">&quot;1&quot;</span>,</span><br><span class="line">        <span class="string">&quot;BUILD_ACTION&quot;</span>: <span class="string">&quot;FRAMESET_BUILDER&quot;</span>,</span><br><span class="line">        <span class="string">&quot;hdmistatus&quot;</span>: <span class="string">&quot;undefined&quot;</span></span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># parse channel info</span></span><br><span class="line">    channels_info = re.findall(<span class="string">r&quot;jsSetChannelInfo\(([^)]+)\);&quot;</span>, res.text)</span><br><span class="line">    channels_info = [json.loads(<span class="string">&#x27;[%s]&#x27;</span> % channel_info.replace(<span class="string">&quot;&#x27;&quot;</span>, <span class="string">&#x27;&quot;&#x27;</span>)) <span class="keyword">for</span> channel_info <span class="keyword">in</span> channels_info]</span><br><span class="line"></span><br><span class="line">    attributes = [<span class="string">&#x27;userChannelID&#x27;</span>, <span class="string">&#x27;timeShift&#x27;</span>, <span class="string">&#x27;TSTVtime&#x27;</span>, <span class="string">&#x27;isIgmp&#x27;</span>, <span class="string">&#x27;channelId&#x27;</span>, <span class="string">&#x27;channelName&#x27;</span>, <span class="string">&#x27;columnId&#x27;</span>,</span><br><span class="line">                  <span class="string">&#x27;channelType&#x27;</span>, <span class="string">&#x27;pipEnable&#x27;</span>, <span class="string">&#x27;lpvrEnable&#x27;</span>, <span class="string">&#x27;channelLevel&#x27;</span>, <span class="string">&#x27;isCanLock&#x27;</span>, <span class="string">&#x27;isIPPV&#x27;</span>, <span class="string">&#x27;mixno&#x27;</span>,</span><br><span class="line">                  <span class="string">&#x27;cdnchannelCode&#x27;</span>, <span class="string">&#x27;advertisecontent&#x27;</span>, <span class="string">&#x27;definition&#x27;</span>, <span class="string">&#x27;tvPauseEnable&#x27;</span>, <span class="string">&#x27;ottcdnchannelcode&#x27;</span>,</span><br><span class="line">                  <span class="string">&#x27;funcswitch&#x27;</span>, <span class="string">&#x27;allownettype&#x27;</span>]</span><br><span class="line">    channels_info = &#123;channel[<span class="number">4</span>]: &#123;k: channel[i] <span class="keyword">for</span> i, k <span class="keyword">in</span> <span class="built_in">enumerate</span>(attributes)&#125; <span class="keyword">for</span> channel <span class="keyword">in</span> channels_info&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># parse channel config</span></span><br><span class="line">    channels = re.findall(<span class="string">r&quot;jsSetConfig\(&#x27;Channel&#x27;, *&#x27;([^&#x27;]+)&#x27;\)&quot;</span>, res.text)</span><br><span class="line">    channels = [json.loads(<span class="string">&#x27;&#123;%s&#125;&#x27;</span> % re.sub(<span class="string">r&quot;(,|^) *([a-zA-Z0-9]+) *=&quot;</span>, <span class="string">r&#x27;\1&quot;\2&quot;:&#x27;</span>, channel)) <span class="keyword">for</span> channel <span class="keyword">in</span> channels]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># merge channel info to config</span></span><br><span class="line">    channels = [&#123;**channel, **channels_info[channel[<span class="string">&#x27;ChannelID&#x27;</span>]]&#125; <span class="keyword">for</span> channel <span class="keyword">in</span> channels]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取分类名称</span></span><br><span class="line">    res = request(<span class="string">&#x27;get&#x27;</span>, API_EPG_BASE + <span class="string">&#x27;frame1451/sdk_getcolumnlist.jsp?columncode=01&#x27;</span>).json()</span><br><span class="line">    <span class="keyword">assert</span> res[<span class="string">&#x27;returncode&#x27;</span>] == <span class="string">&#x27;0&#x27;</span></span><br><span class="line"></span><br><span class="line">    columns = &#123;column[<span class="string">&#x27;columncode&#x27;</span>]: column[<span class="string">&#x27;columnname&#x27;</span>] <span class="keyword">for</span> column <span class="keyword">in</span> res[<span class="string">&#x27;data&#x27;</span>]&#125;</span><br><span class="line">    channels = [&#123;**channel, <span class="string">&#x27;columnname&#x27;</span>: columns[channel[<span class="string">&#x27;columnId&#x27;</span>]]&#125; <span class="keyword">for</span> channel <span class="keyword">in</span> channels]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> channels</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate_epg</span>(<span class="params">channels</span>):</span><br><span class="line">    today = datetime.now()</span><br><span class="line">    today_plus_3 = today.replace(day=today.day + <span class="number">3</span>)</span><br><span class="line"></span><br><span class="line">    tv = Element(<span class="string">&#x27;tv&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> channel <span class="keyword">in</span> channels:</span><br><span class="line">        channel_el = SubElement(tv, <span class="string">&#x27;channel&#x27;</span>, <span class="built_in">id</span>=channel[<span class="string">&#x27;UserChannelID&#x27;</span>])</span><br><span class="line">        SubElement(channel_el, <span class="string">&#x27;display-name&#x27;</span>, lang=<span class="string">&quot;zh&quot;</span>).text = channel[<span class="string">&#x27;ChannelName&#x27;</span>]</span><br><span class="line"></span><br><span class="line">    channel_id_map = &#123;channel[<span class="string">&#x27;ChannelID&#x27;</span>]: channel[<span class="string">&#x27;UserChannelID&#x27;</span>] <span class="keyword">for</span> channel <span class="keyword">in</span> channels&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">parse_time</span>(<span class="params">time</span>):</span><br><span class="line">        <span class="keyword">return</span> datetime.strptime(time, <span class="string">&#x27;%Y.%m.%d %H:%M:%S&#x27;</span>).strftime(<span class="string">&#x27;%Y%m%d%H%M%S +0800&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i, channel <span class="keyword">in</span> <span class="built_in">enumerate</span>(channels):</span><br><span class="line">        <span class="keyword">if</span> i % <span class="number">10</span> == <span class="number">0</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;[*]&#x27;</span>, <span class="string">&#x27;Fetching EPG for channel&#x27;</span>, i + <span class="number">1</span>, <span class="string">&#x27;/&#x27;</span>, <span class="built_in">len</span>(channels))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 获取节目预告</span></span><br><span class="line">        res = request(<span class="string">&#x27;get&#x27;</span>, API_EPG_BASE + <span class="string">&#x27;frame1451/sdk_getprevuellist.jsp?&#x27;</span>, params=&#123;</span><br><span class="line">            <span class="string">&quot;channelcode&quot;</span>: channel[<span class="string">&#x27;ChannelID&#x27;</span>],</span><br><span class="line">            <span class="string">&quot;begintime&quot;</span>: <span class="string">&quot;&#123;&#125; 00:00:00&quot;</span>.<span class="built_in">format</span>(today.strftime(<span class="string">&#x27;%Y.%m.%d&#x27;</span>)),</span><br><span class="line">            <span class="string">&quot;endtime&quot;</span>: <span class="string">&quot;&#123;&#125; 23:59:59&quot;</span>.<span class="built_in">format</span>(today_plus_3.strftime(<span class="string">&#x27;%Y.%m.%d&#x27;</span>)),</span><br><span class="line">            <span class="string">&quot;utcbegintime&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">            <span class="string">&quot;utcendtime&quot;</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">        &#125;).json()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> res[<span class="string">&#x27;returncode&#x27;</span>] != <span class="string">&#x27;0&#x27;</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;[!]&#x27;</span>, <span class="string">&#x27;Failed to fetch EPG for&#x27;</span>, channel[<span class="string">&#x27;ChannelName&#x27;</span>])</span><br><span class="line">            <span class="built_in">print</span>(res)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> program <span class="keyword">in</span> res[<span class="string">&#x27;data&#x27;</span>]:</span><br><span class="line">            programme = SubElement(tv, <span class="string">&#x27;programme&#x27;</span>,</span><br><span class="line">                                   start=parse_time(program[<span class="string">&#x27;begintime&#x27;</span>]),</span><br><span class="line">                                   stop=parse_time(program[<span class="string">&#x27;endtime&#x27;</span>]),</span><br><span class="line">                                   channel=channel_id_map[program[<span class="string">&#x27;channelcode&#x27;</span>]])</span><br><span class="line"></span><br><span class="line">            SubElement(programme, <span class="string">&#x27;title&#x27;</span>, lang=<span class="string">&quot;zh&quot;</span>).text = program[<span class="string">&#x27;prevuename&#x27;</span>]</span><br><span class="line">            SubElement(programme, <span class="string">&#x27;desc&#x27;</span>, lang=<span class="string">&quot;zh&quot;</span>).text = program[<span class="string">&#x27;description&#x27;</span>]</span><br><span class="line">        time.sleep(random.random())</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> (<span class="string">b&#x27;&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&amp;gt;\n&amp;lt;!DOCTYPE tv SYSTEM &quot;xmltv.dtd&quot;&amp;gt;\n&#x27;</span></span><br><span class="line">            + tostring(tv, encoding=<span class="string">&#x27;utf-8&#x27;</span>))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate_m3u</span>(<span class="params">channels</span>):</span><br><span class="line">    m3u = [<span class="string">&#x27;#EXTM3U url-tvg=&quot;&#123;base&#125;/epg.xml&quot; x-tvg-url=&quot;&#123;base&#125;/epg.xml&quot;&#x27;</span>.<span class="built_in">format</span>(base=SERVICE_BASE)]</span><br><span class="line">    <span class="keyword">for</span> channel <span class="keyword">in</span> channels:</span><br><span class="line">        m3u_item = [<span class="string">&#x27;#EXTINF:-1&#x27;</span>, <span class="string">&#x27;tvg-id=&quot;&#123;&#125;&quot;&#x27;</span>.<span class="built_in">format</span>(channel[<span class="string">&#x27;UserChannelID&#x27;</span>]), <span class="string">&#x27;tvg-name=&quot;&#123;&#125;&quot;&#x27;</span>.<span class="built_in">format</span>(channel[<span class="string">&#x27;ChannelName&#x27;</span>]), <span class="string">&#x27;tvg-group=&quot;&#123;&#125;&quot;&#x27;</span>.<span class="built_in">format</span>(channel[<span class="string">&#x27;columnname&#x27;</span>])]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> os.path.exists(<span class="string">&#x27;web/icons/&#123;&#125;.png&#x27;</span>.<span class="built_in">format</span>(channel[<span class="string">&#x27;ChannelID&#x27;</span>])):</span><br><span class="line">            m3u_item.append(<span class="string">&#x27;tvg-logo=&quot;&#123;&#125;/icons/&#123;&#125;.png&quot;&#x27;</span>.<span class="built_in">format</span>(SERVICE_BASE, channel[<span class="string">&#x27;ChannelID&#x27;</span>]))</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> channel[<span class="string">&#x27;TimeShift&#x27;</span>] == <span class="string">&#x27;1&#x27;</span>:</span><br><span class="line">            m3u_item.append(<span class="string">&#x27;catchup=&quot;append&quot;&#x27;</span>)</span><br><span class="line">            m3u_item.append(<span class="string">&#x27;catchup-source=&quot;&#123;&#125;&quot;&#x27;</span>.<span class="built_in">format</span>(channel[<span class="string">&#x27;TimeShiftURL&#x27;</span>]))</span><br><span class="line"></span><br><span class="line">        m3u.append(<span class="string">&#x27; &#x27;</span>.join(m3u_item) + <span class="string">&#x27;,&#x27;</span> + channel[<span class="string">&#x27;ChannelName&#x27;</span>])</span><br><span class="line">        m3u.append(re.sub(<span class="string">r&quot;^igmp://&quot;</span>, UDPXY_BASE, channel[<span class="string">&#x27;ChannelURL&#x27;</span>]))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;\n&#x27;</span>.join(m3u)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    channels = channel_list()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;web/epg.xml&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(generate_epg(channels))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;web/iptv.m3u&#x27;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f.write(generate_m3u(channels))</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;[*]&#x27;</span>, <span class="string">&#x27;Done&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="Step3-安装-Python-环境"><a href="#Step3-安装-Python-环境" class="headerlink" title="Step3: 安装 Python 环境"></a>Step3: 安装 Python 环境</h4><p>将脚本放置在路由器任意目录，这里以<code>/root/iptv/iptv.py</code>为例，并在同目录下创建<code>web</code>文件夹。</p>
+<p>执行下面命令安装 python 及依赖：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">opkg install python3 python3-pip python3-venv</span><br><span class="line">cd /root/iptv</span><br><span class="line">virtualenv venv</span><br><span class="line">/root/iptv/venv/<span class="built_in">bin</span>/pip install pycryptodome requests</span><br></pre></td></tr></table></figure>
+
+<p>手动执行 <code>/root/iptv/venv/bin/python /root/iptv/iptv.py</code> 测试生成节目单与播放列表。</p>
+<p>在 <code>/root/iptv/web/icons</code> 放入台标，以 <code>[ChannelID].png</code> 格式命名。</p>
+<p>在系统-计划任务追加下面内容：<br><code>0 1 */1 * * /root/iptv/venv/bin/python /root/iptv/iptv.py &gt;&gt; /var/log/iptv.log</code></p>
+<p>用 Docker 创建一个 WEB 服务器：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">docker run --restart unless-stopped --name nginx -v /root/iptv/web:/usr/share/nginx/html -v /var/log/nginx:/var/log/nginx -p 1234:80 -d nginx</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step4-设置播放器"><a href="#Step4-设置播放器" class="headerlink" title="Step4: 设置播放器"></a>Step4: 设置播放器</h4><ul>
+<li>xmltv 地址：<code>http://192.168.1.1:1234/epg.xml</code></li>
+<li>m3u 地址：<code>http://192.168.1.1:1234/iptv.m3u</code></li>
+</ul>
+<p>最终效果如下图（如使用 jellyfin）：<br><img src="https://img.hyun.tech/blog/image-1708076430231.png" alt="image-1708076430231"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://blog.340102.xyz">池中物</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://blog.340102.xyz/posts/fdfd3174/">http://blog.340102.xyz/posts/fdfd3174/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://blog.340102.xyz" target="_blank">Only 18+</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="https://bing.340102.xyz/?h=1080" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">池中物</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="mailto:xxxxxx@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a><a class="social-icon" href="https://www.youtube.com" rel="external nofollow noreferrer" target="_blank" title="YouTube"><i class="fab fa-youtube" style="color: #000000;"></i></a><a class="social-icon" href="https://www.wechat.com/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #000000;"></i></a><a class="social-icon" href="https://t.me/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #000000;"></i></a><a class="social-icon" href="https://www.tiktok.com/explore" rel="external nofollow noreferrer" target="_blank" title="TikTok"><i class="fab fa-tiktok" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E4%BD%BF%E7%94%A8%E8%BF%90%E8%90%A5%E5%95%86%E7%9B%92%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">不使用运营商盒子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80-udpxy-%E7%BB%84%E6%92%AD%E8%BD%AC%E5%8D%95%E6%8B%A8-%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">方案一 - udpxy 组播转单拨 (推荐）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step1-%E5%B0%86-IPTV-%E6%8E%A5%E5%85%A5%E4%B8%BB%E8%B7%AF%E7%94%B1"><span class="toc-number">2.1.1.</span> <span class="toc-text">Step1: 将 IPTV 接入主路由</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step2-%E9%85%8D%E7%BD%AE%E4%B8%BB%E8%B7%AF%E7%94%B1"><span class="toc-number">2.1.2.</span> <span class="toc-text">Step2: 配置主路由</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step3-%E6%8A%93%E5%8C%85"><span class="toc-number">2.1.3.</span> <span class="toc-text">Step3: 抓包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step4-%E6%A8%A1%E6%8B%9F%E7%9B%92%E5%AD%90%E7%99%BB%E9%99%86%E8%AE%A4%E8%AF%81"><span class="toc-number">2.1.4.</span> <span class="toc-text">Step4: 模拟盒子登陆认证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step5-%E5%AE%89%E8%A3%85%E5%B9%B6%E9%85%8D%E7%BD%AE-udpxy"><span class="toc-number">2.1.5.</span> <span class="toc-text">Step5: 安装并配置 udpxy</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step6-%E5%88%86%E6%9E%90%E7%BB%84%E6%92%AD%E5%9C%B0%E5%9D%80%E5%B9%B6%E6%B5%8B%E8%AF%95"><span class="toc-number">2.1.6.</span> <span class="toc-text">Step6: 分析组播地址并测试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%BF%90%E8%90%A5%E5%95%86%E7%9B%92%E5%AD%90"><span class="toc-number">3.</span> <span class="toc-text">使用运营商盒子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C-igmpproxy"><span class="toc-number">3.1.</span> <span class="toc-text">方案二 - igmpproxy</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E5%99%A8%E5%B9%B6%E6%A8%A1%E6%8B%9F%E8%AE%A4%E8%AF%81"><span class="toc-number">3.1.1.</span> <span class="toc-text">Step1: 配置路由器并模拟认证</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step2-%E8%BF%9E%E9%80%9AIPTV%E5%86%85%E7%BD%91"><span class="toc-number">3.1.2.</span> <span class="toc-text">Step2: 连通IPTV内网</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step3-%E5%90%AF%E7%94%A8-igmpproxy"><span class="toc-number">3.1.3.</span> <span class="toc-text">Step3: 启用 igmpproxy</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%89-%E5%8D%95%E7%BA%BF%E5%A4%8D%E7%94%A8"><span class="toc-number">3.2.</span> <span class="toc-text">方案三 - 单线复用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step1-%E9%85%8D%E7%BD%AE%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="toc-number">3.2.1.</span> <span class="toc-text">Step1: 配置路由器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step2-%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AE%A1%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="toc-number">3.2.2.</span> <span class="toc-text">Step2: 配置网管交换机</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9B%E9%98%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">4.</span> <span class="toc-text">进阶操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4"><span class="toc-number">4.1.</span> <span class="toc-text">具体步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Step1-%E8%8E%B7%E5%8F%96%E5%BF%85%E8%A6%81%E6%95%B0%E6%8D%AE"><span class="toc-number">4.1.1.</span> <span class="toc-text">Step1: 获取必要数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step2-%E4%BF%AE%E6%94%B9%E8%84%9A%E6%9C%AC%E4%BB%A3%E7%A0%81"><span class="toc-number">4.1.2.</span> <span class="toc-text">Step2: 修改脚本代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step3-%E5%AE%89%E8%A3%85-Python-%E7%8E%AF%E5%A2%83"><span class="toc-number">4.1.3.</span> <span class="toc-text">Step3: 安装 Python 环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Step4-%E8%AE%BE%E7%BD%AE%E6%92%AD%E6%94%BE%E5%99%A8"><span class="toc-number">4.1.4.</span> <span class="toc-text">Step4: 设置播放器</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/fa3940e1/" title="Microsoft Office LTSC 2024 for macOS"><img src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Microsoft Office LTSC 2024 for macOS"/></a><div class="content"><a class="title" href="/posts/fa3940e1/" title="Microsoft Office LTSC 2024 for macOS">Microsoft Office LTSC 2024 for macOS</a><time datetime="2025-12-12T06:33:51.000Z" title="发表于 2025-12-12 14:33:51">2025-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/fdfd3174/" title="iptv相关问题"><img src="https://bing.340102.xyz/?h=1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="iptv相关问题"/></a><div class="content"><a class="title" href="/posts/fdfd3174/" title="iptv相关问题">iptv相关问题</a><time datetime="2025-03-01T03:43:38.000Z" title="发表于 2025-03-01 11:43:38">2025-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f029f310/" title="allinone部署教程"><img src="https://bing.340102.xyz/?h=1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="allinone部署教程"/></a><div class="content"><a class="title" href="/posts/f029f310/" title="allinone部署教程">allinone部署教程</a><time datetime="2025-02-17T07:47:46.000Z" title="发表于 2025-02-17 15:47:46">2025-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d952ac77/" title="allinone使用说明"><img src="https://picsum.photos/1920/1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="allinone使用说明"/></a><div class="content"><a class="title" href="/posts/d952ac77/" title="allinone使用说明">allinone使用说明</a><time datetime="2025-02-17T07:43:19.000Z" title="发表于 2025-02-17 15:43:19">2025-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/5fa76441/" title="安装G-Box"><img src="https://unsplash.it/1920/1080?random" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装G-Box"/></a><div class="content"><a class="title" href="/posts/5fa76441/" title="安装G-Box">安装G-Box</a><time datetime="2025-02-14T04:37:37.000Z" title="发表于 2025-02-14 12:37:37">2025-02-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://bing.340102.xyz/?h=1080);"><div id="footer-wrap"><div class="copyright">&copy;1980 - 2025 By 池中物</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hey, hit <a href="https://blog.340102.xyz/">me</a> hard and soft!!!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'ahsyon/comments',
+      'data-repo-id': 'R_kgDONgKNnA',
+      'data-category-id': 'DIC_kwDONgKNnM4ClY3N',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-order="random" data-mutex="true" > </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

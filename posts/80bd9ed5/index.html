@@ -1,0 +1,280 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>OpenCore Configurator | Only 18+</title><meta name="author" content="池中物"><meta name="copyright" content="池中物"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="黑苹果OC引导配置工具OpenCore Configurator 一款黑苹果OC引导配置工具，通过简化的图形界面帮助您为 OpenCore EFI 引导加载程序创建自定义配置文件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenCore Configurator">
+<meta property="og:url" content="http://blog.340102.xyz/posts/80bd9ed5/index.html">
+<meta property="og:site_name" content="Only 18+">
+<meta property="og:description" content="黑苹果OC引导配置工具OpenCore Configurator 一款黑苹果OC引导配置工具，通过简化的图形界面帮助您为 OpenCore EFI 引导加载程序创建自定义配置文件">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://t.mwm.moe/fj">
+<meta property="article:published_time" content="2024-12-23T08:21:21.000Z">
+<meta property="article:modified_time" content="2025-02-25T02:25:09.359Z">
+<meta property="article:author" content="池中物">
+<meta property="article:tag" content="黑苹果">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://t.mwm.moe/fj"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "OpenCore Configurator",
+  "url": "http://blog.340102.xyz/posts/80bd9ed5/",
+  "image": "https://t.mwm.moe/fj",
+  "datePublished": "2024-12-23T08:21:21.000Z",
+  "dateModified": "2025-02-25T02:25:09.359Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "池中物",
+      "url": "http://blog.340102.xyz/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://blog.340102.xyz/posts/80bd9ed5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          const mediaQueryDark = window.matchMedia('(prefers-color-scheme: dark)')
+          const mediaQueryLight = window.matchMedia('(prefers-color-scheme: light)')
+          
+          if (theme === undefined) {
+            if (mediaQueryLight.matches) activateLightMode()
+            else if (mediaQueryDark.matches) activateDarkMode()
+            else {
+              const hour = new Date().getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            mediaQueryDark.addEventListener('change', () => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else {
+            theme === 'light' ? activateLightMode() : activateDarkMode()
+          }
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: 池中物","link":"链接: ","source":"来源: Only 18+","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'OpenCore Configurator',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-ellipsis-h"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw far fa-envelope"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/network-status/"><i class="fa-fw fas fa-wifi"></i><span> 网络状态</span></a></li><li><a class="site-page child" href="/equipment/"><i class="fa-fw fas fa-desktop"></i><span> 我的装备</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://t.mwm.moe/fj);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://pic.340102.xyz/api/rfile/WeChat40d5941863bf6d38343ec142e8d35310.jpg" alt="Logo"></a><a class="nav-page-title" href="/"><span class="site-name">OpenCore Configurator</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文章</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-gamepad"></i><span> 休闲</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movie/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-ellipsis-h"></i><span> 其他</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/comments/"><i class="fa-fw far fa-envelope"></i><span> 留言板</span></a></li><li><a class="site-page child" href="/network-status/"><i class="fa-fw fas fa-wifi"></i><span> 网络状态</span></a></li><li><a class="site-page child" href="/equipment/"><i class="fa-fw fas fa-desktop"></i><span> 我的装备</span></a></li><li><a class="site-page child" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></li></ul></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">OpenCore Configurator</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-23T08:21:21.000Z" title="发表于 2024-12-23 16:21:21">2024-12-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-25T02:25:09.359Z" title="更新于 2025-02-25 10:25:09">2025-02-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/macOS%E7%9B%B8%E5%85%B3/">macOS相关</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">470</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div></div>
+
+<h3 id="黑苹果OC引导配置工具"><a href="#黑苹果OC引导配置工具" class="headerlink" title="黑苹果OC引导配置工具"></a>黑苹果OC引导配置工具</h3><p>OpenCore Configurator 一款黑苹果OC引导配置工具，通过简化的图形界面帮助您为 OpenCore EFI 引导加载程序创建自定义配置文件</p>
+<span id="more"></span>
+
+<p>新版已经几乎修复了所有BUG，已经可以正常作为OC配置文件编辑的可视化工具。大家可以放心的用来编辑你的OC配置文件了！</p>
+<p>中文设置：<br>打开OpenCore Configurator –&gt; 左上角OpenCore Configurator菜单点击 –&gt; Preferences –&gt; Languages –&gt; 中文</p>
+<p><img src="https://pic.340102.xyz/api/rfile/291734942282_.pic.jpg" alt="OpenCore Configurator"></p>
+<h3 id="2-77-0-0-OpenCore-1-0-3-supported"><a href="#2-77-0-0-OpenCore-1-0-3-supported" class="headerlink" title="2.77.0.0 [OpenCore 1.0.3 supported]"></a>2.77.0.0 [OpenCore 1.0.3 supported]</h3><p>Added Unload property in UEFI section<br>Added OC 1.0.3 support</p>
+<h3 id="2-76-2-0-OpenCore-1-0-2-supported"><a href="#2-76-2-0-OpenCore-1-0-2-supported" class="headerlink" title="2.76.2.0 [OpenCore 1.0.2 supported]"></a>2.76.2.0 [OpenCore 1.0.2 supported]</h3><p>Added OC 1.0.2 support<br>Updated Spanish language</p>
+<h3 id="2-76-1-0-OpenCore-1-0-1-supported"><a href="#2-76-1-0-OpenCore-1-0-1-supported" class="headerlink" title="2.76.1.0 [OpenCore 1.0.1 supported]"></a>2.76.1.0 [OpenCore 1.0.1 supported]</h3><p>Added OC 1.0.1 support<br>Added Portuguese (Brazilian) language</p>
+<h3 id="2-76-0-0-OpenCore-0-9-9-supported"><a href="#2-76-0-0-OpenCore-0-9-9-supported" class="headerlink" title="2.76.0.0 [OpenCore 0.9.9 supported]"></a>2.76.0.0 [OpenCore 0.9.9 supported]</h3><p>Removed unused SkipCustomEntryCheck key in Misc-&gt;Boot [MOD version only]<br>Added OC 0.9.8 support</p>
+<h3 id="2-75-0-0-OpenCore-0-9-7-supported"><a href="#2-75-0-0-OpenCore-0-9-7-supported" class="headerlink" title="2.75.0.0 [OpenCore 0.9.7 supported]"></a>2.75.0.0 [OpenCore 0.9.7 supported]</h3><p>Added FixupAppleEfiImages key in Booter-&gt;Quirks properties<br>Added Spanish language</p>
+<h3 id="2-74-1-0-OpenCore-0-9-6-supported"><a href="#2-74-1-0-OpenCore-0-9-6-supported" class="headerlink" title="2.74.1.0 [OpenCore 0.9.6 supported]"></a>2.74.1.0 [OpenCore 0.9.6 supported]</h3><p>Added OC 0.9.6 support</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.189.cn/web/share?code=MrM73qq6Fziu">网盘下载</a>（访问码：tjh4）</p>
+<h3 id="2-74-0-0-OpenCore-0-9-5-supported"><a href="#2-74-0-0-OpenCore-0-9-5-supported" class="headerlink" title="2.74.0.0 [OpenCore 0.9.5 supported]"></a>2.74.0.0 [OpenCore 0.9.5 supported]</h3><p>Added ShimRetainProtocol key in UEFI-&gt;Quirks properties [available only for OC 0.9.5 development version]</p>
+<h3 id="2-73-0-0"><a href="#2-73-0-0" class="headerlink" title="2.73.0.0"></a>2.73.0.0</h3><p>Added InstanceIdentifier key in Misc-&gt;Boot properties [available only for OC 0.9.4 development version]</p>
+<h3 id="2-72-0-0-OpenCore-0-9-4-supported"><a href="#2-72-0-0-OpenCore-0-9-4-supported" class="headerlink" title="2.72.0.0 [OpenCore 0.9.4 supported]"></a>2.72.0.0 [OpenCore 0.9.4 supported]</h3><p>Added ConsoleFont key in UEFI-&gt;Output properties</p>
+<h3 id="2-71-0-0"><a href="#2-71-0-0" class="headerlink" title="2.71.0.0"></a>2.71.0.0</h3><p>Added PciIo key in UEFI-&gt;ProtocolOverrides properties [available only for OC 0.9.3 development version]<br>Added 11th and 12th desktop CPU family (Rocket Lake, Alder Lake) in Config Checker and EFI Maker tools</p>
+<h3 id="2-70-0-0-OpenCore-0-9-3-supported"><a href="#2-70-0-0-OpenCore-0-9-3-supported" class="headerlink" title="2.70.0.0 [OpenCore 0.9.3 supported]"></a>2.70.0.0 [OpenCore 0.9.3 supported]</h3><p>Added InitialMode key in UEFI -&gt; Output properties</p>
+<h3 id="2-69-0-1"><a href="#2-69-0-1" class="headerlink" title="2.69.0.1"></a>2.69.0.1</h3><p>Fixed GopBurstMode in UEFI -&gt; Output properties</p>
+<h3 id="2-69-0-0-OpenCore-0-9-2-supported"><a href="#2-69-0-0-OpenCore-0-9-2-supported" class="headerlink" title="2.69.0.0 [OpenCore 0.9.2 supported]"></a>2.69.0.0 [OpenCore 0.9.2 supported]</h3><p>Added DisableIoMapperMapping key in Kernel -&gt; Quirks properties [available only for OC 0.9.2 development version]<br>Added OC 0.9.1 support in Config Checker tool</p>
+<h3 id="2-68-0-0"><a href="#2-68-0-0" class="headerlink" title="2.68.0.0"></a>2.68.0.0</h3><p>Added GopBurstMode key in UEFI -&gt; Output properties [available only for OC 0.9.1 development version]<br>Fixed ResizeUsePciRbIo in UEFI -&gt; Quirks properties</p>
+<h3 id="2-67-1-0-OpenCore-0-9-1-supported"><a href="#2-67-1-0-OpenCore-0-9-1-supported" class="headerlink" title="2.67.1.0 [OpenCore 0.9.1 supported]"></a>2.67.1.0 [OpenCore 0.9.1 supported]</h3><p>Added support for OC 0.9.1<br>Fixes and Improvements</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://cloud.189.cn/web/share?code=rMzea2VRjyye">网盘下载</a> （访问码：w7fj）</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://blog.340102.xyz">池中物</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://blog.340102.xyz/posts/80bd9ed5/">http://blog.340102.xyz/posts/80bd9ed5/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://blog.340102.xyz" target="_blank">Only 18+</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/">黑苹果</a></div><div class="post-share"><div class="social-share" data-image="https://t.mwm.moe/fj" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/603675b6/" title="天逸510s Mini兼macOS BigSur安装教程"><img class="cover" src="https://pan.daliansky.net/d/blog/510sMini/0.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-01-21</div><div class="info-item-2">天逸510s Mini兼macOS BigSur安装教程</div></div><div class="info-2"><div class="info-item-1">   Big Sur安装教程 最近懒癌发作，一直准备写的安装教程迟迟没有动笔。这不，十一黄金周都已经过去了，本该在节假日完成的作业又拖到了现在。好吧，该交的作业还是要交的不是。 喝着现磨的咖啡，整理下思绪，写下全新的Big Sur安装教程吧。  安装前准备以前的安装教程都是只写教程本身的操作，没有往外延伸。 现在都已经是2020年了，全新的Big Sur随时都会发布，无论是硬件还是macOS系统本身，已经有了翻天覆地的变化。 硬件准备：在使用macOS之前，需要先了解下硬件都有哪些限制，也就是哪些硬件是被支持的，哪些是不被支持的。 CPU:先说CPU ：截止到日前为止，Big Sur已经支持包括Comet Lake &#x2F; Coffee Lake &#x2F; Kaby Lake &#x2F; Skylake &#x2F; Haswell等Intel平台的安装使用；当然，Ryzen的Zen &#x2F; Zen2以及全新的Gen3 Threadripper的AMD平台也未曾缺席，还有INTEL的HEDT平台也是支持的。一句话概括：就是它支持Intel &#x2F; AMD...</div></div></div></a><a class="pagination-related" href="/posts/644e2078/" title="黑苹果常见问题"><img class="cover" src="https://api.dujin.org/bing/1920.php" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-21</div><div class="info-item-2">黑苹果常见问题</div></div><div class="info-2"><div class="info-item-1"> _强烈建议_您没有在生产力设备上安装Beta版软件，从而覆盖了所有稳定的发行版。Beta版软件可能会造成无法挽回的硬件损坏或无法挽回的数据丢失，应自行承担使用风险。 对于使用预发行软件或非官方支持补丁引起的任何潜在损坏或数据丢失，Apple和所有补丁开发者概不负责。请您自己承担风险使用。    我应该使用OpenCore还是Clover截止到目前为止，无论是OpenCore还是Clover，都已经支持Ventura安装使用了  OpenCore v0.9.5 下载 OCAT 下载   Clover v5148 下载 Clover Configurator v5.18.3.0 下载    我可以直接在线升级吗我给您的建议是：不建议小白直接在线更新；比较稳妥的方法是在现在的磁盘上切一个单独的分区进行安装测试 如何保证顺利升级 macOS 正式版 请使用OpenCore v0.9.5 下载 &#x2F; Clover v5148 下载 请于boot-args中添加引导参数：vsmcgen=1， 可能还需要其它引导参数：-lilubetaall vsmcbeta DW1820A...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="giscus-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://pic.340102.xyz/api/rfile/IMG_5522.jpeg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">池中物</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">26</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">10</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="mailto:xxxxxx@gmail.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a><a class="social-icon" href="https://www.youtube.com" rel="external nofollow noreferrer" target="_blank" title="YouTube"><i class="fab fa-youtube" style="color: #000000;"></i></a><a class="social-icon" href="https://www.wechat.com/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="WeChat"><i class="fab fa-weixin" style="color: #000000;"></i></a><a class="social-icon" href="https://t.me/xxxxxx" rel="external nofollow noreferrer" target="_blank" title="Telegram"><i class="fab fa-telegram" style="color: #000000;"></i></a><a class="social-icon" href="https://www.tiktok.com/explore" rel="external nofollow noreferrer" target="_blank" title="TikTok"><i class="fab fa-tiktok" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%BB%91%E8%8B%B9%E6%9E%9COC%E5%BC%95%E5%AF%BC%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">黑苹果OC引导配置工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-77-0-0-OpenCore-1-0-3-supported"><span class="toc-number">2.</span> <span class="toc-text">2.77.0.0 [OpenCore 1.0.3 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-76-2-0-OpenCore-1-0-2-supported"><span class="toc-number">3.</span> <span class="toc-text">2.76.2.0 [OpenCore 1.0.2 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-76-1-0-OpenCore-1-0-1-supported"><span class="toc-number">4.</span> <span class="toc-text">2.76.1.0 [OpenCore 1.0.1 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-76-0-0-OpenCore-0-9-9-supported"><span class="toc-number">5.</span> <span class="toc-text">2.76.0.0 [OpenCore 0.9.9 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-75-0-0-OpenCore-0-9-7-supported"><span class="toc-number">6.</span> <span class="toc-text">2.75.0.0 [OpenCore 0.9.7 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-74-1-0-OpenCore-0-9-6-supported"><span class="toc-number">7.</span> <span class="toc-text">2.74.1.0 [OpenCore 0.9.6 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-74-0-0-OpenCore-0-9-5-supported"><span class="toc-number">8.</span> <span class="toc-text">2.74.0.0 [OpenCore 0.9.5 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-73-0-0"><span class="toc-number">9.</span> <span class="toc-text">2.73.0.0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-72-0-0-OpenCore-0-9-4-supported"><span class="toc-number">10.</span> <span class="toc-text">2.72.0.0 [OpenCore 0.9.4 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-71-0-0"><span class="toc-number">11.</span> <span class="toc-text">2.71.0.0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-70-0-0-OpenCore-0-9-3-supported"><span class="toc-number">12.</span> <span class="toc-text">2.70.0.0 [OpenCore 0.9.3 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-69-0-1"><span class="toc-number">13.</span> <span class="toc-text">2.69.0.1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-69-0-0-OpenCore-0-9-2-supported"><span class="toc-number">14.</span> <span class="toc-text">2.69.0.0 [OpenCore 0.9.2 supported]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-68-0-0"><span class="toc-number">15.</span> <span class="toc-text">2.68.0.0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-67-1-0-OpenCore-0-9-1-supported"><span class="toc-number">16.</span> <span class="toc-text">2.67.1.0 [OpenCore 0.9.1 supported]</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/fa3940e1/" title="Microsoft Office LTSC 2024 for macOS"><img src="https://t.mwm.moe/fj" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Microsoft Office LTSC 2024 for macOS"/></a><div class="content"><a class="title" href="/posts/fa3940e1/" title="Microsoft Office LTSC 2024 for macOS">Microsoft Office LTSC 2024 for macOS</a><time datetime="2025-12-12T06:33:51.000Z" title="发表于 2025-12-12 14:33:51">2025-12-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/fdfd3174/" title="iptv相关问题"><img src="https://bing.340102.xyz/?h=1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="iptv相关问题"/></a><div class="content"><a class="title" href="/posts/fdfd3174/" title="iptv相关问题">iptv相关问题</a><time datetime="2025-03-01T03:43:38.000Z" title="发表于 2025-03-01 11:43:38">2025-03-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f029f310/" title="allinone部署教程"><img src="https://bing.340102.xyz/?h=1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="allinone部署教程"/></a><div class="content"><a class="title" href="/posts/f029f310/" title="allinone部署教程">allinone部署教程</a><time datetime="2025-02-17T07:47:46.000Z" title="发表于 2025-02-17 15:47:46">2025-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d952ac77/" title="allinone使用说明"><img src="https://picsum.photos/1920/1080" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="allinone使用说明"/></a><div class="content"><a class="title" href="/posts/d952ac77/" title="allinone使用说明">allinone使用说明</a><time datetime="2025-02-17T07:43:19.000Z" title="发表于 2025-02-17 15:43:19">2025-02-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/5fa76441/" title="安装G-Box"><img src="https://unsplash.it/1920/1080?random" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="安装G-Box"/></a><div class="content"><a class="title" href="/posts/5fa76441/" title="安装G-Box">安装G-Box</a><time datetime="2025-02-14T04:37:37.000Z" title="发表于 2025-02-14 12:37:37">2025-02-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://t.mwm.moe/fj);"><div id="footer-wrap"><div class="copyright">&copy;1980 - 2025 By 池中物</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hey, hit <a href="https://blog.340102.xyz/">me</a> hard and soft!!!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getGiscusTheme = theme => theme === 'dark' ? 'dark' : 'light'
+
+  const createScriptElement = config => {
+    const ele = document.createElement('script')
+    Object.entries(config).forEach(([key, value]) => {
+      ele.setAttribute(key, value)
+    })
+    return ele
+  }
+
+  const loadGiscus = (el = document, key) => {
+    const mappingConfig = isShuoshuo
+      ? { 'data-mapping': 'specific', 'data-term': key }
+      : { 'data-mapping': (option && option['data-mapping']) || 'pathname' }
+
+    const giscusConfig = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'ahsyon/comments',
+      'data-repo-id': 'R_kgDONgKNnA',
+      'data-category-id': 'DIC_kwDONgKNnM4ClY3N',
+      'data-theme': getGiscusTheme(document.documentElement.getAttribute('data-theme')),
+      'data-reactions-enabled': '1',
+      crossorigin: 'anonymous',
+      async: true,
+      ...option,
+      ...mappingConfig
+    }
+
+    const scriptElement = createScriptElement(giscusConfig)
+
+    el.querySelector('#giscus-wrap').appendChild(scriptElement)
+
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyGiscus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+  }
+
+  const changeGiscusTheme = theme => {
+    const iframe = document.querySelector('#giscus-wrap iframe')
+    if (iframe) {
+      const message = {
+        giscus: {
+          setConfig: {
+            theme: getGiscusTheme(theme)
+          }
+        }
+      }
+      iframe.contentWindow.postMessage(message, 'https://giscus.app')
+    }
+  }
+
+  btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
+
+  if (isShuoshuo) {
+    'Giscus' === 'Giscus'
+      ? window.shuoshuoComment = { loadComment: loadGiscus }
+      : window.loadOtherComment = loadGiscus
+    return
+  }
+
+  if ('Giscus' === 'Giscus' || !false) {
+    if (false) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
+  } else {
+    window.loadOtherComment = loadGiscus
+  }
+})()</script></div><div class="aplayer no-destroy" data-id="60198" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-order="random" data-mutex="true" > </div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
